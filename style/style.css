@@ -1,4 +1,28 @@
 body {
 	font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
+	background-color: black;
+}
+
+header {
+	background-color:blue;
+}
+
+nav  {
+	display: block;
+}
+
+main {
+	height:500px;
+	background-color: green;
+}
+
+footer {
+	background-color:pink;
+}
+
+#container {
+	height:300px;
+	width:700px;
+	background-color:red;
 }
 
