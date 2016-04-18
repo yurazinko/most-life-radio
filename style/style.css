@@ -8,7 +8,7 @@ a {
 	text-decoration: none;
 }
 
-nav a :hover {
+nav ul li a :hover {
 	color:white;
 	text-decoration: none;
 }
