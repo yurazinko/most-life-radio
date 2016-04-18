@@ -4,10 +4,12 @@ body {
 }
 
 a {
+	color:white;
 	text-decoration: none;
 }
 
 a :hover {
+	color:white;
 	text-decoration: none;
 }
 
@@ -35,7 +37,7 @@ nav li {
 
 nav a {
 	display:block;
-	color: greenyellow;
+	color: white;
 	line-height:4em;
 	text-align:center;
 	
