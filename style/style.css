@@ -3,12 +3,42 @@ body {
 	background-color: black;
 }
 
+a {
+	text-decoration: none;
+}
+
+ul {
+	margin:0;
+	padding:0;
+}
+
+ul li {
+	list-style-type:none;
+}
+
 header {
 	background-color:blue;
 }
 
 nav  {
-	display: block;
+	min-height:64px;
+}
+
+nav li {
+	float:left;
+	width:100px;
+}
+
+nav a {
+	display:block;
+	color: greenyellow;
+	line-height:4em;
+	text-align:center;
+	
+}
+
+.uppercase {
+	text-transform: uppercase;
 }
 
 main {
@@ -20,9 +50,30 @@ footer {
 	background-color:pink;
 }
 
-#container {
+button {
+	font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
+}
+
+#frequences-block {
+	width:95%;
+	height: 400px;
+	background-color: orange;
+	margin:5px;
+}
+
+.container {
+	margin:5px;
 	height:300px;
-	width:700px;
+	width:93%;
 	background-color:red;
 }
 
+.frequency-animation {
+	display:block;
+	margin-right: 20px;
+	float: left;
+	width:60px;
+	height:20px;
+	background-color: white;
+	margin-bottom:5px;
+}
