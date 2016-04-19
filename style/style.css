@@ -4,6 +4,7 @@ body {
 
 a {
 	text-decoration: none;
+	color:inherit;
 }
 
 ul {
@@ -35,8 +36,9 @@ nav a {
 	
 }
 
-.uppercase {
+a.uppercase {
 	text-transform: uppercase;
+	text-decoration:none;
 	color:inherit;
 }
 
