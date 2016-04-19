@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 	
-	alert('Hooray! Working! Just move cursor on the navigation links and see result!');
-
 	var links = document.getElementsByClassName('navlink');
 	var i;
 	for (i = 0; i < links.length; ++i) {
@@ -13,5 +11,4 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	}
 
-}
-);
+});
