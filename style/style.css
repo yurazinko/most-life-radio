@@ -1,14 +1,8 @@
 body {
 	font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
-	background-color: black;
 }
 
 a {
-	text-decoration: none;
-}
-
-nav ul li a :hover {
-	color:white;
 	text-decoration: none;
 }
 
@@ -57,6 +51,8 @@ footer {
 
 button {
 	font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
+	border:5px solid transparent;
+	border-radius:30px;
 }
 
 #frequences-block {
