@@ -4,6 +4,7 @@ html, body #main {
 
 body {
 	font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
+	background-color:black;
 }
 
 a {
@@ -21,7 +22,7 @@ ul li {
 }
 
 header {
-	background-color:blue;
+	background-color:transparent;
 }
 
 nav  {
@@ -37,13 +38,14 @@ nav a {
 	display:block;
 	line-height:4em;
 	text-align:center;
+	color:white;
 	
 }
 
 a.uppercase {
 	text-transform: uppercase;
 	text-decoration:none;
-	color:inherit;
+	color:white;
 }
 
 main {
@@ -51,7 +53,7 @@ main {
 	height:100%;
 	min-height:400px;
 	width:100%;
-	background-color: green;
+	background-color: transparent;
 	overflow: visible;
 }
 
@@ -86,13 +88,13 @@ button {
 
 
 .frequency-animation {
+	background-image: url(img/equalizer-columns-background-small.png);
 	text-align:center;
 	display:block;
 	margin-right: 40px;
 	float: left;
 	width:7%;
 	height:20px;
-	background-color: white;
 	margin-bottom:5px;
 	bottom:5%;
 }
@@ -108,7 +110,9 @@ button {
 
 footer {
 	position:fixed;
+	color:green;
+	text-align:center;
 	bottom:0;
 	width:100%;
-	background-color:pink;
+	background-color:transparent;
 }
