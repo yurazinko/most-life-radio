@@ -61,10 +61,55 @@ main {
 
 button {
 	font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
-	border:5px solid transparent;
-	border-radius:30px;
 }
 
+button#play-stop {
+	width:150px;
+	height:150px;
+	border: 10px solid transparent;
+	border-radius:75px;
+	outline:none;
+}
+
+button#volume-level {
+	width:50px;
+	height:50px;
+	border:10px solid transparent;
+	border-radius: 75px;
+	outline:none;
+	transform:translateY(45px);
+}
+
+#bitrade-switcher {
+	display:block;
+}
+
+.bitrate-button {
+	width:50px;
+	margin-top:15px;
+	margin-right: 29px;
+	float:left;
+	border-radius: 5px;
+	outline:none;
+}
+
+#player {
+	min-width:400px;
+	z-index:10;
+	position:fixed;
+	top:25%;
+	bottom:45%;
+	left:40%;
+	right:40%;
+}
+
+#lcd-screen {
+	transform:translateX(-85px);
+	min-width:250px;
+	border:1px solid green;
+	height:100px;
+	margin-bottom:10px;
+}
 
 #frequences-block {          /*  must be hidden after resize */
 	background-color: transparent;
@@ -81,7 +126,7 @@ button {
 	position:fixed;
 	display:flex;
 	width:100%;
-	height:5%;
+	height:7%;
 	bottom:20px;
 }
 
@@ -89,7 +134,6 @@ button {
 
 .frequency-animation {
 	background-image: url(img/equalizer-columns-background-small.png);
-	text-align:center;
 	display:block;
 	margin-right: 40px;
 	float: left;
@@ -99,13 +143,13 @@ button {
 	bottom:5%;
 }
 
-#player {
-	z-index:10;
-	position:fixed;
-	top:45%;
-	bottom:45%;
-	left:40%;
-	right:40%;
+.frequency-description {
+    text-align:center;
+    display:block;
+	width:7%;
+	position:absolute;
+	transform: translateY(20px);
+	color:darkgray;
 }
 
 footer {
