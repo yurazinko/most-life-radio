@@ -65,11 +65,11 @@ button {
 
 
 #frequences-block {          /*  must be hidden after resize */
+	background-color: transparent;
 	position:relative;
 	width:98%;
 	min-height: 520px;
 	height: 95%;
-	background-color: orange;
 	margin:1%;
 }
 
@@ -79,7 +79,7 @@ button {
 	position:fixed;
 	display:flex;
 	width:100%;
-	height:100px;
+	height:5%;
 	bottom:20px;
 }
 
@@ -87,8 +87,7 @@ button {
 
 .frequency-animation {
 	text-align:center;
-	position: fixed;
-	display:flex;
+	display:block;
 	margin-right: 40px;
 	float: left;
 	width:7%;
