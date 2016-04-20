@@ -1,6 +1,9 @@
+html, body #main {
+    height: 100%;
+}
+
 body {
 	font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
-	height:100%;
 }
 
 a {
@@ -44,14 +47,15 @@ a.uppercase {
 }
 
 main {
-	min-height:500px;
-	height: 100%;
+	position:absolute;
+	height:100%;
+	min-height:400px;
+	width:100%;
 	background-color: green;
+	overflow: visible;
 }
 
-footer {
-	background-color:pink;
-}
+
 
 button {
 	font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
@@ -60,17 +64,18 @@ button {
 }
 
 
-#frequences-block {           /* must be hidden after resize */
+#frequences-block {          /*  must be hidden after resize */
 	position:relative;
 	width:98%;
-	min-height: 512px;
+	min-height: 520px;
+	height: 95%;
 	background-color: orange;
 	margin:1%;
 }
 
 
 
-.frequences-start {          /* must be hidden after resize */
+.frequences-start {         /*  must be hidden after resize */
 	position:fixed;
 	display:flex;
 	width:100%;
@@ -78,8 +83,11 @@ button {
 	bottom:20px;
 }
 
+
+
 .frequency-animation {
 	text-align:center;
+	position: fixed;
 	display:flex;
 	margin-right: 40px;
 	float: left;
@@ -87,7 +95,7 @@ button {
 	height:20px;
 	background-color: white;
 	margin-bottom:5px;
-	bottom:10px;
+	bottom:5%;
 }
 
 #player {
@@ -100,5 +108,8 @@ button {
 }
 
 footer {
-	w
+	position:fixed;
+	bottom:0;
+	width:100%;
+	background-color:pink;
 }
