@@ -116,7 +116,6 @@ button#volume-level {
 	position:relative;
 	width:98%;
 	min-height: 520px;
-/*	height: 1px;  */
 	margin:1%;
 	overflow:visible;
 }
@@ -127,7 +126,6 @@ button#volume-level {
 	position:fixed;
 	display:flex;
 	width:100%;
-/*	height:1px; */
 	bottom:50px;
 	overflow:visible;
 }
@@ -135,15 +133,7 @@ button#volume-level {
 
 
 .frequency-animation {
-	background-image: url(img/equalizer-columns-background-small.png);
-	display:block;
-	margin-right: 40px;
-	float: left;
-	width:7%;
-/*	min-height:10px; */
-/*	height:200px; */
-	margin-bottom:5px;
-	bottom:5%;
+	/*moved to hz classes*/
 }
 
 .frequency-description {
@@ -165,11 +155,22 @@ footer {
 }
 
 /*Test*/
-#f070hz {
-	height:50px;
-	bottom:inherit;
+.f070hz, .f180hz, .f320hz, .f600hz, .f01khz, 
+.f03khz, .f06khz, .f12khz, .f14khz, .f16khz {
+	margin-right: 40px;
+	float: left;
+	width:7%;
+	position:relative;
+	margin-bottom:5px;
+	bottom:5%;
+	display:inline-block;
+	background-image: url(img/equalizer-columns-background-small.png);
+	min-height:20px;
+	-webkit-transition: height 2s; /* For Safari 3.1 to 6.0 */
+    transition: height 2s;
 }
 
-#f180hz {
+#f070hz {
+/*	position: absolute; */
 	height:100px;
 }
