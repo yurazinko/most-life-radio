@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 	
-	var links = document.getElementsByClassName('navlink');
+	var links = document.getElementsByTagName('a');
 	var i;
 	for (i = 0; i < links.length; ++i) {
 		links[i].onmouseover = function() {

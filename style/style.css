@@ -9,7 +9,6 @@ body {
 
 a {
 	text-decoration: none;
-	color:inherit;
 }
 
 ul {
@@ -25,16 +24,37 @@ header {
 	background-color:transparent;
 }
 
-nav  {
+#social-links {
 	min-height:64px;
+	position:fixed;
+	left:10px;
 }
 
-nav li {
+#social-links li {
 	float:left;
-	width:100px;
+	width:40px;
 }
 
-nav a {
+
+#social-links a {
+	display:block;
+	line-height:4em;
+	text-align:center;
+	color:white;
+}
+
+#language-bar  {
+	min-height:64px;
+	position:fixed;
+	right:10px;
+}
+
+#language-bar li {
+	float:left;
+	width:40px;
+}
+
+#language-bar a {
 	display:block;
 	line-height:4em;
 	text-align:center;
@@ -63,17 +83,27 @@ button {
 	font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
 }
 
+#player {
+	min-width:400px;
+	z-index:10;
+	position:fixed;
+	top:35%;
+	bottom:45%;
+	left:40%;
+	right:40%;
+}
+
 button#play-stop {
-	width:150px;
-	height:150px;
+	width:100px;
+	height:100px;
 	border: 10px solid transparent;
 	border-radius:75px;
 	outline:none;
 }
 
 button#volume-level {
-	width:50px;
-	height:50px;
+	width:35px;
+	height:35px;
 	border:10px solid transparent;
 	border-radius: 75px;
 	outline:none;
@@ -93,56 +123,13 @@ button#volume-level {
 	outline:none;
 }
 
-#player {
-	min-width:400px;
-	z-index:10;
-	position:fixed;
-	top:25%;
-	bottom:45%;
-	left:40%;
-	right:40%;
-}
 
 #lcd-screen {
-	transform:translateX(-85px);
+	transform:translate(-100px, 100px); 
 	min-width:250px;
 	border:1px solid green;
-	height:100px;
-	margin-bottom:10px;
-}
-
-#frequences-block {          /*  must be hidden after resize */
-	background-color: transparent;
-	position:relative;
-	width:98%;
-	min-height: 520px;
-	margin:1%;
-	overflow:visible;
-}
-
-
-
-.frequences-start {         /*  must be hidden after resize */
-	position:fixed;
-	display:flex;
-	width:100%;
-	bottom:50px;
-	overflow:visible;
-}
-
-
-
-.frequency-animation {
-	/*moved to hz classes*/
-}
-
-.frequency-description {
-    text-align:center;
-    display:block;
-	width:7%;
-	position:fixed;
-	color:darkgray;
-	bottom:30px;
+	height:50px;
+	margin:10px;
 }
 
 footer {
@@ -154,23 +141,3 @@ footer {
 	background-color:transparent;
 }
 
-/*Test*/
-.f070hz, .f180hz, .f320hz, .f600hz, .f01khz, 
-.f03khz, .f06khz, .f12khz, .f14khz, .f16khz {
-	margin-right: 40px;
-	float: left;
-	width:7%;
-	position:relative;
-	margin-bottom:5px;
-	bottom:5%;
-	display:inline-block;
-	background-image: url(img/equalizer-columns-background-small.png);
-	min-height:20px;
-	-webkit-transition: height 2s; /* For Safari 3.1 to 6.0 */
-    transition: height 2s;
-}
-
-#f070hz {
-/*	position: absolute; */
-	height:100px;
-}
