@@ -27,12 +27,12 @@ header {
 #social-links {
 	min-height:64px;
 	position:fixed;
-	left:10px;
+	left:5px;
 }
 
 #social-links li {
 	float:left;
-	width:40px;
+	width:30px;
 }
 
 
@@ -46,12 +46,12 @@ header {
 #language-bar  {
 	min-height:64px;
 	position:fixed;
-	right:10px;
+	right:5px;
 }
 
 #language-bar li {
 	float:left;
-	width:40px;
+	width:30px;
 }
 
 #language-bar a {
@@ -77,20 +77,33 @@ main {
 	overflow: visible;
 }
 
-
-
 button {
 	font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
 }
 
 #player {
-	min-width:400px;
+	display:block;
+	min-width:320px;
 	z-index:10;
 	position:fixed;
 	top:35%;
 	bottom:45%;
-	left:40%;
-	right:40%;
+	right:18%;
+	left:38.5%;
+}
+
+@media screen and (min-width: 450px) {
+    #player {
+        top:35%;
+		bottom:45%;
+		left:47%;
+		right:47%;
+    }
+}
+
+#controls {
+	    position: relative;
+	    right: 10px;
 }
 
 button#play-stop {
@@ -101,13 +114,13 @@ button#play-stop {
 	outline:none;
 }
 
-button#volume-level {
-	width:35px;
-	height:35px;
-	border:10px solid transparent;
-	border-radius: 75px;
-	outline:none;
-	transform:translateY(45px);
+#volume-slider {
+	display:block;
+	border: 1px solid green;
+	max-width:340px;
+	height:5px;
+	margin:10px;
+	transform:translate(-110px, 90px);
 }
 
 #bitrade-switcher {
@@ -117,7 +130,7 @@ button#volume-level {
 .bitrate-button {
 	width:50px;
 	margin-top:15px;
-	margin-right: 29px;
+	margin-right: 4px;
 	float:left;
 	border-radius: 5px;
 	outline:none;
@@ -125,8 +138,9 @@ button#volume-level {
 
 
 #lcd-screen {
-	transform:translate(-100px, 100px); 
-	min-width:250px;
+	display:block;
+	transform:translate(-120px, 100px); 
+	max-width:340px;
 	border:1px solid green;
 	height:50px;
 	margin:10px;
