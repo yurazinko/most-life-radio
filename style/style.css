@@ -4,7 +4,7 @@ html, body #main {
 
 body {
 	font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
-	background-color:black;
+	background-color:#E2EAEC;
 }
 
 a {
@@ -82,6 +82,7 @@ button {
 }
 
 #player {
+	
 	display:block;
 	min-width:320px;
 	z-index:10;
@@ -106,7 +107,7 @@ button {
 	    right: 10px;
 }
 
-button#play-stop {
+#play-stop {
 	width:100px;
 	height:100px;
 	border: 10px solid transparent;
@@ -114,6 +115,9 @@ button#play-stop {
 	outline:none;
 }
 
+.stopped {
+	background: url("../style/img/player/play-button.png") no-repeat;
+}
 /* VOLUME START*/
 
 #volume-slider {
@@ -142,21 +146,31 @@ button#play-stop {
 	float:left;
 	border-radius: 5px;
 	outline:none;
+	background-color:#8695B1;
+	border: 3px solid white;
+	color:gray;
 }
 
+.bitrate-button.active {
+	border: 3px solid white;
+	background-color: #F1951C; 
+	color: #ffffff;
+}
 
 #lcd-screen {
 	display:block;
 	transform:translate(-120px, 100px); 
 	max-width:340px;
-	border:1px solid green;
-	height:50px;
+	border:10px solid #56698F;
+	border-radius:5px;
+	background-color: #56698F;
+	height:45px;
 	margin:10px;
 }
 
 footer {
 	position:fixed;
-	color:green;
+	color:#56698F;
 	text-align:center;
 	bottom:0;
 	width:100%;

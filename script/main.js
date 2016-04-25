@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 	
-	var links = document.getElementsByTagName('a');
+	var links = document.getElementsByTagName('langlink');
 	var i;
 	for (i = 0; i < links.length; ++i) {
 		links[i].onmouseover = function() {
@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 });
+
+
 
 /* VOLUME SLIDER */
 
