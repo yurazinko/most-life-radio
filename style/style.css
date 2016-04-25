@@ -81,8 +81,21 @@ button {
 	font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
 }
 
+.logo {
+	width:150px;
+	position:absolute;
+	transform: translate(-35px, -140px);
+}
+
+.pseudo-equalizer {
+	width:320px;
+	height:170px;
+	position:absolute;
+	transform: translate(-119px, 10px);
+}
+
 #player {
-	
+
 	display:block;
 	min-width:320px;
 	z-index:10;
@@ -110,6 +123,7 @@ button {
 #play-stop {
 	width:100px;
 	height:100px;
+	transform: translate(0px,10px);
 	border: 10px solid transparent;
 	border-radius:75px;
 	outline:none;
@@ -159,8 +173,8 @@ button {
 
 #lcd-screen {
 	display:block;
-	transform:translate(-120px, 100px); 
-	max-width:340px;
+	transform:translate(-127px, 100px); 
+	width:310px;
 	border:10px solid #56698F;
 	border-radius:5px;
 	background-color: #56698F;
