@@ -114,14 +114,22 @@ button#play-stop {
 	outline:none;
 }
 
+/* VOLUME START*/
+
 #volume-slider {
 	display:block;
-	border: 1px solid green;
+	border: 1px solid transparent;
 	max-width:340px;
 	height:5px;
 	margin:10px;
 	transform:translate(-110px, 90px);
 }
+
+
+
+/* VOLUME END*/
+
+
 
 #bitrade-switcher {
 	display:block;
@@ -129,7 +137,7 @@ button#play-stop {
 
 .bitrate-button {
 	width:50px;
-	margin-top:15px;
+	margin-top:5px;
 	margin-right: 4px;
 	float:left;
 	border-radius: 5px;
