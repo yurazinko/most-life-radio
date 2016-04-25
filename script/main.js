@@ -14,6 +14,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+
+	var bitrateButton = document.getElementsByClassName('bitrate-button');
+				for (var i = 0; i < bitrateButton.length; i++) {
+					bitrateButton[i].onclick = function() {
+						this.parentNode.children.removeAttribute('class', 'active');
+						this.setAttribute('class', 'active');
+					}
+				}
+});
+
+
+function togglePlayer() {
+	var playButton = document.getElementById('play-stop');
+	  if (playButton.className == 'stopped') {
+	   playButton.className = 'played';}
+
+	  else if(playButton.className == 'played') {
+	   playButton.className = 'stopped';}
+}
+
 
 /* VOLUME SLIDER */
 

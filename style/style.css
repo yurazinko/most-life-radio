@@ -132,6 +132,11 @@ button {
 .stopped {
 	background: url("../style/img/player/play-button.png") no-repeat;
 }
+
+.played {
+	background: url("../style/img/player/play-button-active.png") no-repeat;
+}
+
 /* VOLUME START*/
 
 #volume-slider {
@@ -165,7 +170,13 @@ button {
 	color:gray;
 }
 
-.bitrate-button.active {
+.active {
+	width:50px;
+	margin-top:5px;
+	margin-right: 4px;
+	float:left;
+	border-radius: 5px;
+	outline:none;
 	border: 3px solid white;
 	background-color: #F1951C; 
 	color: #ffffff;
