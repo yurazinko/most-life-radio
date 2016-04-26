@@ -18,6 +18,7 @@ ul {
 
 ul li {
 	list-style-type:none;
+	margin:5px;
 }
 
 header {
@@ -42,6 +43,15 @@ header {
 	text-align:center;
 	color:white;
 }
+
+.social-button {
+	height:30px;
+}
+
+.social-button:hover {
+	border: 1px solid red;
+}
+
 
 #language-bar  {
 	min-height:64px;

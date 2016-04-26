@@ -1,31 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
-	
-	var links = document.getElementsByTagName('langlink');
-	var i;
-	for (i = 0; i < links.length; ++i) {
-		links[i].onmouseover = function() {
-			this.setAttribute('class', 'uppercase');
-		}
-		links[i].onmouseout = function() {
-			this.removeAttribute('class', 'uppercase');
-		}
-	}
 
-});
-
-
+/* Bitrate switcher*/
 document.addEventListener('DOMContentLoaded', function() {
 
+	var parent = document.getElementById('bitrate-switcher');
 	var bitrateButton = document.getElementsByClassName('bitrate-button');
 				for (var i = 0; i < bitrateButton.length; i++) {
 					bitrateButton[i].onclick = function() {
-						this.parentNode.children.removeAttribute('class', 'active');
+						parent.children.removeAttribute('class', 'active');
 						this.setAttribute('class', 'active');
 					}
 				}
 });
 
-
+/* Play-stop button*/
 function togglePlayer() {
 	var playButton = document.getElementById('play-stop');
 	  if (playButton.className == 'stopped') {
@@ -36,8 +23,9 @@ function togglePlayer() {
 }
 
 
-/* VOLUME SLIDER */
 
+
+/* VOLUME SLIDER */
 $(function() {
 
 	var slider = $('#slider');
