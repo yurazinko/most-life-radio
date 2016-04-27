@@ -116,6 +116,13 @@ button {
 }
 
 @media screen and (min-width: 450px) {
+    
+    body {
+
+    	background: url('../style/img/backgroung.jpg') repeat top left;
+
+    }
+
     #player {
         top:35%;
 		bottom:45%;
@@ -146,8 +153,6 @@ button {
 	background: url("../style/img/player/play-button-active.png") no-repeat;
 }
 
-/* VOLUME START*/
-
 #volume-slider {
 	display:block;
 	border: 1px solid transparent;
@@ -156,12 +161,6 @@ button {
 	margin:10px;
 	transform:translate(-110px, 90px);
 }
-
-
-
-/* VOLUME END*/
-
-
 
 #bitrade-switcher {
 	display:block;
