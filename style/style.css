@@ -48,7 +48,7 @@ header {
 .social-button {
 	display:block;
 	height:30px;
-	opacity:0.8;
+	opacity:0.9;
 }
 
 #language-bar  {
@@ -109,7 +109,7 @@ button {
 	min-width:320px;
 	z-index:10;
 	position:fixed;
-	top:35%;
+	top:39%;
 	bottom:45%;
 	right:18%;
 	left:38.5%;
