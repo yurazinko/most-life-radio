@@ -1,3 +1,18 @@
+/* Mouse over button effects*/
+document.addEventListener('DOMContentLoaded', function() {
+
+	var socialButton = document.getElementsByClassName('social-button');
+		for(var i = 0; i < socialButton.length; i++) {
+			socialButton[i].onmouseover = function() {
+				this.style.opacity = '1';
+			}
+			socialButton[i].onmouseout = function() {
+				this.style.opacity = '0.9';
+			}
+		}
+			
+});
+
 
 /* Bitrate switcher*/
 document.addEventListener('DOMContentLoaded', function() {
@@ -6,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	var bitrateButton = document.getElementsByClassName('bitrate-button');
 				for (var i = 0; i < bitrateButton.length; i++) {
 					bitrateButton[i].onclick = function() {
-						parent.children.removeAttribute('class', 'active');
 						this.setAttribute('class', 'active');
 					}
 				}
@@ -24,8 +38,7 @@ function togglePlayer() {
 
 
 
-
-/* VOLUME SLIDER */
+/* Volume slider */
 $(function() {
 
 	var slider = $('#slider');

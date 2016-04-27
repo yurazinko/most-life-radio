@@ -29,6 +29,7 @@ header {
 	min-height:64px;
 	position:fixed;
 	left:5px;
+	z-index:1000;
 }
 
 #social-links li {
@@ -45,18 +46,16 @@ header {
 }
 
 .social-button {
+	display:block;
 	height:30px;
+	opacity:0.8;
 }
-
-.social-button:hover {
-	border: 1px solid red;
-}
-
 
 #language-bar  {
 	min-height:64px;
 	position:fixed;
 	right:5px;
+	z-index:1000;
 }
 
 #language-bar li {
@@ -194,7 +193,7 @@ button {
 
 #lcd-screen {
 	display:block;
-	transform:translate(-127px, 100px); 
+	transform:translate(-127px, 80px); 
 	width:310px;
 	border:10px solid #56698F;
 	border-radius:5px;
