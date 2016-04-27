@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				this.style.opacity = '1';
 			}
 			socialButton[i].onmouseout = function() {
-				this.style.opacity = '0.9';
+				this.style.opacity = '0.7';
 			}
 		}
 			
