@@ -115,7 +115,7 @@ button {
 	left:38.5%;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 450px) and (min-height: 450px) {
     
     body {
 
@@ -131,6 +131,40 @@ button {
     }
 }
 
+@media screen and (max-width: 521px) and (max-height: 251px) {
+	
+	.logo {
+	    position:absolute;
+	    transform: translate(-180px, -55px);
+
+	}
+	.pseudo-equalizer {
+		position: absolute;
+	    transform: translate(-15px, -96px);
+	    height:200px;
+	}
+
+	button#play-stop {
+	    transform: translate(105px, -90px);
+	}
+
+	div#volume-slider {
+		transform: translate(-5px, -80px);
+	}
+
+	div#bitrate-switcher {
+		transform: translate(100px, -90px);
+	}
+
+	div#lcd-screen {
+		transform: translate(-21px, -52px);
+	}
+
+	footer {
+		display:none;
+	}
+
+}
 #controls {
 	    position: relative;
 	    right: 10px;
