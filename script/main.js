@@ -13,17 +13,19 @@ document.addEventListener('DOMContentLoaded', function() {
 			
 });
 
-
 /* Bitrate switcher*/
 document.addEventListener('DOMContentLoaded', function() {
-
-	var parent = document.getElementById('bitrate-switcher');
+	var childrenElems = document.getElementById('bitrate-switcher').children;
 	var bitrateButton = document.getElementsByClassName('bitrate-button');
-				for (var i = 0; i < bitrateButton.length; i++) {
-					bitrateButton[i].onclick = function() {
-						this.setAttribute('class', 'active');
-					}
-				}
+	function deleteChildren() {
+		childrenElems.removeAttribute('class', 'active');
+	};
+		for (var i = 0; i < bitrateButton.length; i++) {
+			bitrateButton[i].onclick = function() {
+				deleteChildren();
+				this.setAttribute('class', 'active');
+			}
+		}
 });
 
 /* Play-stop button*/
@@ -35,8 +37,6 @@ function togglePlayer() {
 	  else if(playButton.className == 'played') {
 	   playButton.className = 'stopped';}
 }
-
-
 
 /* Volume slider */
 $(function() {

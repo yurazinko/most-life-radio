@@ -1,3 +1,5 @@
+/* NOTICE! The styles are Mobile-First! */
+
 html, body #main {
     height: 100%;
 }
@@ -56,6 +58,7 @@ header {
 	position:fixed;
 	right:5px;
 	z-index:1000;
+	display:none;
 }
 
 #language-bar li {
@@ -115,56 +118,7 @@ button {
 	left:38.5%;
 }
 
-@media screen and (min-width: 450px) and (min-height: 450px) {
-    
-    body {
 
-    	background: url('../style/img/backgroung.jpg');
-
-    }
-
-    #player {
-        top:35%;
-		bottom:45%;
-		left:47%;
-		right:47%;
-    }
-}
-
-@media screen and (max-width: 521px) and (max-height: 251px) {
-	
-	.logo {
-	    position:absolute;
-	    transform: translate(-180px, -55px);
-
-	}
-	.pseudo-equalizer {
-		position: absolute;
-	    transform: translate(-15px, -96px);
-	    height:200px;
-	}
-
-	button#play-stop {
-	    transform: translate(105px, -90px);
-	}
-
-	div#volume-slider {
-		transform: translate(-5px, -80px);
-	}
-
-	div#bitrate-switcher {
-		transform: translate(100px, -90px);
-	}
-
-	div#lcd-screen {
-		transform: translate(-21px, -52px);
-	}
-
-	footer {
-		display:none;
-	}
-
-}
 #controls {
 	    position: relative;
 	    right: 10px;
@@ -235,6 +189,10 @@ button {
 	margin:10px;
 }
 
+#flip-button {
+	display:none;
+}
+
 footer {
 	position:fixed;
 	color:#56698F;
@@ -244,3 +202,97 @@ footer {
 	background-color:transparent;
 }
 
+#flip-block {
+	display:none;
+}
+
+/* Styles for desktops START*/
+
+@media screen and (min-width: 450px) and (min-height: 450px) {
+    
+    body {
+
+    	background: url('../style/img/backgroung.jpg');
+
+    }
+
+    #player {
+        top:35%;
+		bottom:45%;
+		left:47%;
+		right:47%;
+    }
+
+    #flip-block {
+	display:block;
+	min-height:64px;
+	position:fixed;
+	left: 5px;
+    bottom: 10px;
+	z-index:1000;
+}
+
+#flip-block li {
+
+}
+
+.flip-button {
+	display:block;
+	height:27px;
+	opacity:0.7;
+}
+
+.flip-button-main {
+	transform:translate(20px, 0px);
+	height:30px;
+	width:180px;
+}
+}
+
+/*END*/
+
+/* Mini-version of player START*/
+
+@media screen and (max-width: 521px) and (max-height: 251px) {
+	
+	.logo {
+	    position:absolute;
+	    transform: translate(-180px, -55px);
+	}
+
+	.pseudo-equalizer {
+		position: absolute;
+	    transform: translate(-15px, -96px);
+	    height:200px;
+	}
+
+	button#play-stop {
+	    transform: translate(105px, -90px);
+	}
+
+	div#volume-slider {
+		transform: translate(-5px, -80px);
+	}
+
+	div#bitrate-switcher {
+		transform: translate(100px, -90px);
+	}
+
+	div#lcd-screen {
+		transform: translate(-21px, -52px);
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+	}
+
+	#flip-button {
+		display:block;
+		height:28px;
+		transform: translate(-57px, -55px);
+}
+
+	footer {
+		display:none;
+	}
+}
+
+/* END*/
