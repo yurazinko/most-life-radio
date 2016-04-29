@@ -227,6 +227,10 @@ footer {
 		right:47%;
     }
 
+    .pseudo-equalizer {
+	    opacity: 0.7;
+    }
+
     #flip-block {
 		display:block;
 		min-height:64px;
