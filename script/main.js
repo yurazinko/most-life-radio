@@ -1,7 +1,7 @@
 /* Mouse over button effects*/
 document.addEventListener('DOMContentLoaded', function() {
 
-	var socialButton = document.getElementsByClassName('social-button');
+	var socialButton = document.getElementsByClassName('hover');
 		for(var i = 0; i < socialButton.length; i++) {
 			socialButton[i].onmouseover = function() {
 				this.style.opacity = '1';

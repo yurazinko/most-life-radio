@@ -206,6 +206,10 @@ footer {
 	display:none;
 }
 
+#chats-block {
+	display:none;
+}
+
 /* Styles for desktops START*/
 
 @media screen and (min-width: 450px) and (min-height: 450px) {
@@ -224,29 +228,61 @@ footer {
     }
 
     #flip-block {
-	display:block;
-	min-height:64px;
-	position:fixed;
-	left: 5px;
-    bottom: 10px;
-	z-index:1000;
-}
+		display:block;
+		min-height:64px;
+		position:fixed;
+		left: 5px;
+	    bottom: 5px;
+		z-index:1000;
+	}
 
-#flip-block li {
+	#flip-block li {
 
-}
+	}
 
-.flip-button {
-	display:block;
-	height:27px;
-	opacity:0.7;
-}
+	.flip-button {
+		display:block;
+		height:27px;
+		opacity:0.7;
+	}
 
-.flip-button-main {
-	transform:translate(20px, 0px);
-	height:30px;
-	width:180px;
-}
+	.flip-button-main {
+		transform:translate(20px, 0px);
+		height:28px;
+		width:180px;
+	}
+
+	#chats-block {
+		display:block;
+		min-height:64px;
+		position:fixed;
+		right: 5px;
+	    bottom: 10px;
+		z-index:1000;
+	}
+
+	.chat-button {
+		display: block;
+	    height: 27px;
+	    opacity: 0.7;
+	}
+
+	.chat-button-head {
+		transform:translate(50px, 0px);
+	}
+
+
+	#chat-social-btn-block {
+		display:block;
+		width:200px;
+		transform: translate(-25px, 0px);
+	}
+
+	.chat-button-main {
+		float:right;
+		margin-right: -11px;
+	}
+
 }
 
 /*END*/
