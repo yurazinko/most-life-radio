@@ -32,6 +32,7 @@ function togglePlayer() {
 			   playButton.className = 'stopped';
 		}
 }
+
 /* Left pop-up window*/
 function togglePopUp() {
 	var popUpButton = document.getElementById('left-popup');
