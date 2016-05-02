@@ -15,15 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* Bitrate switcher*/
 document.addEventListener('DOMContentLoaded', function() {
-	var childrenElems = document.getElementById('bitrate-switcher').children;
 	var bitrateButton = document.getElementsByClassName('bitrate-button');
-	function deleteChildren() {
-		childrenElems.removeAttribute('class', 'active');
-	};
 		for (var i = 0; i < bitrateButton.length; i++) {
 			bitrateButton[i].onclick = function() {
-				deleteChildren();
-				this.setAttribute('class', 'active');
+				/* write function here */
 			}
 		}
 });
@@ -31,11 +26,23 @@ document.addEventListener('DOMContentLoaded', function() {
 /* Play-stop button*/
 function togglePlayer() {
 	var playButton = document.getElementById('play-stop');
-	  if (playButton.className == 'stopped') {
-	   playButton.className = 'played';}
-
-	  else if(playButton.className == 'played') {
-	   playButton.className = 'stopped';}
+		if (playButton.className == 'stopped') {
+			   playButton.className = 'played';
+		} else if (playButton.className == 'played') {
+			   playButton.className = 'stopped';
+		}
+}
+/* Left pop-up window*/
+function togglePopUp() {
+	var popUpButton = document.getElementById('left-popup');
+	  
+	if (popUpButton.className == 'popup-hidden') {
+		   popUpButton.classList.remove('popup-hidden'); 
+		   popUpButton.classList.add('popup-visible'); 
+	} else if (popUpButton.className == 'popup-visible') {
+		   popUpButton.classList.remove('popup-visible'); 
+		   popUpButton.classList.add('popup-hidden'); 
+	}
 }
 
 /* Volume slider */

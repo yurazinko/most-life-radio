@@ -202,17 +202,14 @@ footer {
 	background-color:transparent;
 }
 
-#flip-block {
+#flip-block, #chats-block, #left-popup, #right-popup {
 	display:none;
 }
 
-#chats-block {
-	display:none;
-}
 
-/* Styles for desktops START*/
+/* Styles for desktop START*/
 
-@media screen and (min-width: 450px) and (min-height: 450px) {
+@media screen and (min-width: 850px) and (min-height: 600px) {
     
     body {
 
@@ -285,6 +282,36 @@ footer {
 	.chat-button-main {
 		float:right;
 		margin-right: -11px;
+	}
+
+	#left-popup {
+		top:12%;
+		left:10px;
+		width:30%;
+		height:70%;
+	}
+
+	#left-popup.popup-hidden {
+		display:none;
+	}
+
+	#left-popup.popup-visible {
+		display: block;
+		position: fixed;
+		border: 1px solid red;
+	}
+
+
+	#right-popup {
+		top:12%;
+		display: block;
+		visibility:hidden;
+		position: fixed;
+		right:10px;
+		background-color:transparent;
+		border: 1px solid red;
+		width:30%;
+		height:70%;
 	}
 
 }
