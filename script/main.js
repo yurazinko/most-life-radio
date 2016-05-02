@@ -1,4 +1,4 @@
-/* Mouse over button effects*/
+/* Mouseover button effects*/
 document.addEventListener('DOMContentLoaded', function() {
 
 	var socialButton = document.getElementsByClassName('hover');
