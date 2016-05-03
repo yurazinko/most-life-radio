@@ -32,7 +32,8 @@
 	</header>
 	<main>
 	<div id="left-popup" class="popup-hidden"></div>
-	<div id="right-popup" class=""></div>
+	<div id="fb-popup" class="popup-hidden"></div>
+	<div id="vk-popup" class="popup-hidden"></div>
 		<div id="player">
 		<img class="logo" src="style/img/player/main-logo.png" alt="Radio Logo">
 		<img class="pseudo-equalizer" src="style/img/player/pseudo-equalizer.png" alt="Equalizer">
@@ -60,7 +61,7 @@
 		<div id="flip-block">
 			<ul>
 				<li><img class="flip-button" src="style/img/on-air-button-head.png"></li>
-				<li><a href="#" onclick="togglePopUp()"><img class="flip-button flip-button-main hover" src="style/img/on-air-info-button.png"></a></li>
+				<li><a href="#" onclick="togglePopUpLeft()"><img class="flip-button flip-button-main hover" src="style/img/on-air-info-button.png"></a></li>
 			</ul>
 		</div>
 		<div id="chats-block">
@@ -68,8 +69,8 @@
 				<li><img class="chat-button chat-button-head" src="style/img/chat-button-head.png"></li>
 				<li>
 					<ul id = "chat-social-btn-block">
-						<li><a href="#"><img class="chat-button chat-button-main hover" src="style/img/chat-button-vk.png"></a></li>
-						<li><a href="#"><img class="chat-button chat-button-main hover" src="style/img/chat-button-facebook.png"></a></li>
+						<li><a href="#" onclick="togglePopUpVk()"><img class="chat-button chat-button-main hover" src="style/img/chat-button-vk.png"></a></li>
+						<li><a href="#" onclick="togglePopUpFb()"><img class="chat-button chat-button-main hover" src="style/img/chat-button-facebook.png"></a></li>
 					</ul>
 				</li>
 			</ul>

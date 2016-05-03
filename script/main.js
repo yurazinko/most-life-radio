@@ -33,8 +33,8 @@ function togglePlayer() {
 		}
 }
 
-/* Left pop-up window*/
-function togglePopUp() {
+/* Left pop-up window */
+function togglePopUpLeft() {
 	var popUpButton = document.getElementById('left-popup');
 	  
 	if (popUpButton.className == 'popup-hidden') {
@@ -43,6 +43,37 @@ function togglePopUp() {
 	} else if (popUpButton.className == 'popup-visible') {
 		   popUpButton.classList.remove('popup-visible'); 
 		   popUpButton.classList.add('popup-hidden'); 
+	}
+}
+
+/* Right pop-up windows */
+function togglePopUpFb() {
+	var fbWindow = document.getElementById('fb-popup');
+	var vkWindow = document.getElementById('vk-popup');
+
+	if (fbWindow.className == 'popup-hidden') {
+		vkWindow.classList.remove('popup-visible');
+		vkWindow.classList.add('popup-hidden');
+		fbWindow.classList.remove('popup-hidden');
+		fbWindow.classList.add('popup-visible');
+	} else if (fbWindow.className == 'popup-visible') {
+		fbWindow.classList.remove('popup-visible');
+		fbWindow.classList.add('popup-hidden');
+	}
+}
+
+function togglePopUpVk() {
+	var fbWindow = document.getElementById('fb-popup');
+	var vkWindow = document.getElementById('vk-popup');
+
+	if (vkWindow.className == 'popup-hidden') {
+		fbWindow.classList.remove('popup-visible');
+		fbWindow.classList.add('popup-hidden');
+		vkWindow.classList.remove('popup-hidden');
+		vkWindow.classList.add('popup-visible');
+	} else if (vkWindow.className == 'popup-visible') {
+		vkWindow.classList.remove('popup-visible');
+		vkWindow.classList.add('popup-hidden');
 	}
 }
 

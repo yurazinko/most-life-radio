@@ -302,16 +302,38 @@ footer {
 	}
 
 
-	#right-popup {
+	#fb-popup {
 		top:12%;
-		display: block;
-		visibility:hidden;
-		position: fixed;
 		right:10px;
-		background-color:transparent;
-		border: 1px solid red;
 		width:30%;
 		height:70%;
+	}
+
+	#fb-popup.popup-hidden {
+		display:none;
+	}
+
+	#fb-popup.popup-visible {
+		display: block;
+		position: fixed;
+		border: 1px solid red;
+	}
+
+	#vk-popup {
+		top:12%;
+		right:10px;
+		width:30%;
+		height:70%;
+	}
+
+	#vk-popup.popup-hidden {
+		display:none;
+	}
+
+	#vk-popup.popup-visible {
+		display: block;
+		position: fixed;
+		border: 1px solid green;
 	}
 
 }
