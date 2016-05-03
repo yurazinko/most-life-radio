@@ -376,7 +376,8 @@ footer {
 	#flip-button {
 		display:block;
 		height:28px;
-		transform: translate(-57px, -55px);
+		width:400px;
+		transform: translate(-140px, -55px);
 }
 
 	footer {
