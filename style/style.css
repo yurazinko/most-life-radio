@@ -298,7 +298,9 @@ footer {
 	#left-popup.popup-visible {
 		display: block;
 		position: fixed;
-		border: 1px solid red;
+		background-color: #D8DCEE;
+		border: 10px solid #D8DCEE;
+		border-radius:10px;
 	}
 
 
@@ -316,7 +318,9 @@ footer {
 	#fb-popup.popup-visible {
 		display: block;
 		position: fixed;
-		border: 1px solid red;
+		background-color: #D8DCEE;
+		border: 10px solid #D8DCEE;
+		border-radius:10px;
 	}
 
 	#vk-popup {
@@ -333,7 +337,13 @@ footer {
 	#vk-popup.popup-visible {
 		display: block;
 		position: fixed;
-		border: 1px solid green;
+		background-color: #D8DCEE;
+		border: 10px solid #D8DCEE;
+		border-radius:10px;
+	}
+
+	.popup-title {
+		text-align:center;
 	}
 
 }
@@ -342,7 +352,7 @@ footer {
 
 /* Mini-version of player START*/
 
-@media screen and (max-width: 521px) and (max-height: 251px) {
+@media screen and (max-width: 521px) and (max-height: 401px) {
 	
 	.logo {
 	    position:absolute;
