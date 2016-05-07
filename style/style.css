@@ -202,7 +202,7 @@ footer {
 	background-color:transparent;
 }
 
-#flip-block, #chats-block, #left-popup, #right-popup {
+#flip-block, #chats-block, #left-popup, #fb-popup, #vk-popup {
 	display:none;
 }
 
