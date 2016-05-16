@@ -1,95 +1,110 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Most Live Radio</title>
-	<meta charset="utf-8">
+    <title>Most Live Radio</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style/normalize.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono|Anonymous+Pro|Inconsolata&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="style/animate.css">
-	<link rel="stylesheet" type="text/css" href="style/slider.css">
-	<link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono|Anonymous+Pro|Inconsolata&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style/animate.css">
+    <link rel="stylesheet" type="text/css" href="style/slider.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
-<body>
-	<header>
-	<div id="social-links">
-		<ul>
-			<li><a href="#"><img class="social-button hover" src="style/img/social-buttons/facebook-button.png" alt="Facebook"></a></li>
-			<li><a href="#"><img class="social-button hover" src="style/img/social-buttons/vk-button.png" alt="VK"></a></li>
-			<li><a href="#"><img class="social-button hover" src="style/img/social-buttons/twitter-button.png" alt="Twitter"></a></li>
-			<li><a href="#"><img class="social-button hover" src="style/img/social-buttons/instagram-button.png" alt="Instagram"></a></li>
-		</ul>
-	</div>
-	<div id="language-bar">
-		<ul>
-			<li><a class ="langlink" href="#">ua</a></li>
-			<li><a class ="langlink" href="#">pl</a></li>
-			<li><a class ="langlink" href="#">eng</a></li>
-			<li><a class ="langlink" href="#">ru</a></li>
-		</ul>
-	</div>
-	</header>
-	<main>
-		<div id="left-popup" class="popup-hidden">
-			<h2 class="popup-title">On Air now:</h2>
-		</div>
-		<div id="fb-popup" class="popup-hidden">
-			<h2 class="popup-title">Facebook chat</h2>
-		</div>
-		<div id="vk-popup" class="popup-hidden">
-			<h2 class="popup-title">VK chat</h2>
-		</div>
-			<div id="player">
-			<img class="logo" src="style/img/player/main-logo.png" alt="Radio Logo">
-			<img class="pseudo-equalizer" src="style/img/player/pseudo-equalizer.png" alt="Equalizer">
-				<div id="logo"></div>
-				<div id="controls">
-					<button onclick="togglePlayer()" id="play-stop" class="stopped"></button>
 
-					<div id="volume-slider">
-						<section>
-							<span class="tooltip"></span>
-							<div id="slider"></div>
-						</section>
-					</div>
-					
-					<div id="bitrate-switcher">
-						<button class="bitrate-button">64</button>
-						<button class="bitrate-button active">128</button>
-					</div>
-				</div>
-					<div id="lcd-screen"></div>
-					<img id="flip-button" src="style/img/flip-button-sm-p.png" alt="Flip Button">	
-			</div>
-	</main>
-	<footer>
-		<div id="flip-block">
-			<ul>
-				<li><img class="flip-button" src="style/img/on-air-button-head.png" alt="on air now"></li>
-				<li><a href="#" onclick="togglePopUpLeft()"><img class="flip-button flip-button-main hover" src="style/img/on-air-info-button.png" alt="on air button"></a></li>
-			</ul>
-		</div>
-		<div id="chats-block">
-			<ul>
-				<li><img class="chat-button chat-button-head" src="style/img/chat-button-head.png" alt="Chats"></li>
-				<li>
-					<ul id = "chat-social-btn-block">
-						<li><a href="#" onclick="togglePopUpVk()"><img class="chat-button chat-button-main hover" src="style/img/chat-button-vk.png" alt="VK chat"></a></li>
-						<li><a href="#" onclick="togglePopUpFb()"><img class="chat-button chat-button-main hover" src="style/img/chat-button-facebook.png" alt="Facebook chat"></a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-		© 2016 Most Live Radio
-	</footer>
+<body>
+    <header>
+        <div id="social-links">
+            <ul>
+                <li>
+                    <a href="#"><img class="social-button hover" src="style/img/social-buttons/facebook-button.png" alt="Facebook"></a>
+                </li>
+                <li>
+                    <a href="#"><img class="social-button hover" src="style/img/social-buttons/vk-button.png" alt="VK"></a>
+                </li>
+                <li>
+                    <a href="#"><img class="social-button hover" src="style/img/social-buttons/twitter-button.png" alt="Twitter"></a>
+                </li>
+                <li>
+                    <a href="#"><img class="social-button hover" src="style/img/social-buttons/instagram-button.png" alt="Instagram"></a>
+                </li>
+            </ul>
+        </div>
+        <div id="language-bar">
+            <ul>
+                <li><a class="langlink" href="#">ua</a></li>
+                <li><a class="langlink" href="#">pl</a></li>
+                <li><a class="langlink" href="#">eng</a></li>
+                <li><a class="langlink" href="#">ru</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div id="left-popup" class="popup-hidden">
+            <h2 class="popup-title">On Air now:</h2>
+        </div>
+        <div id="fb-popup" class="popup-hidden">
+            <h2 class="popup-title">Facebook chat</h2>
+        </div>
+        <div id="vk-popup" class="popup-hidden">
+            <h2 class="popup-title">VK chat</h2>
+        </div>
+        <div id="player">
+            <img class="logo" src="style/img/player/main-logo.png" alt="Radio Logo">
+            <img class="pseudo-equalizer" src="style/img/player/pseudo-equalizer.png" alt="Equalizer">
+            <div id="logo"></div>
+            <div id="controls">
+                <button onclick="togglePlayer()" id="play-stop" class="stopped"></button>
+                <div id="volume-slider">
+                    <section>
+                        <span class="tooltip"></span>
+                        <div id="slider"></div>
+                    </section>
+                </div>
+                <div id="bitrate-switcher">
+                    <button class="bitrate-button">64</button>
+                    <button class="bitrate-button active">128</button>
+                </div>
+            </div>
+            <div id="lcd-screen"></div>
+            <img id="flip-button" src="style/img/flip-button-sm-p.png" alt="Flip Button">
+        </div>
+    </main>
+    <footer>
+        <div id="flip-block">
+            <ul>
+                <li><img class="flip-button" src="style/img/on-air-button-head.png" alt="on air now"></li>
+                <li>
+                    <a href="#" onclick="togglePopUpLeft()"><img class="flip-button flip-button-main hover" src="style/img/on-air-info-button.png" alt="on air button"></a>
+                </li>
+            </ul>
+        </div>
+        <div id="chats-block">
+            <ul>
+                <li><img class="chat-button chat-button-head" src="style/img/chat-button-head.png" alt="Chats"></li>
+                <li>
+                    <ul id="chat-social-btn-block">
+                        <li>
+                            <a href="#" onclick="togglePopUpVk()"><img class="chat-button chat-button-main hover" src="style/img/chat-button-vk.png" alt="VK chat"></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="togglePopUpFb()"><img class="chat-button chat-button-main hover" src="style/img/chat-button-facebook.png" alt="Facebook chat"></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        © 2016 Most Live Radio
+    </footer>
 </body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/jquery-ui.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="script/wow-min.js"></script> 
-    <script>
-        new WOW().init();
-    </script>
-	<script type="text/javascript" src="script/main.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="script/wow-min.js"></script>
+<script>
+new WOW().init();
+</script>
+<script type="text/javascript" src="script/main.js"></script>
+
 </html>

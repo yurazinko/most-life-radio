@@ -1,398 +1,365 @@
 /* NOTICE! The styles are Mobile-First! */
 
-html, body #main {
+html,
+body #main {
     height: 100%;
 }
 
 body {
-	font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
-	background-color:#E2EAEC;
+    font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
+    background-color: #E2EAEC;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 ul {
-	margin:0;
-	padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 ul li {
-	list-style-type:none;
-	margin:5px;
+    list-style-type: none;
+    margin: 5px;
 }
 
 header {
-	background-color:transparent;
+    background-color: transparent;
 }
 
 #social-links {
-	min-height:64px;
-	position:fixed;
-	left:5px;
-	z-index:1000;
+    min-height: 64px;
+    position: fixed;
+    left: 5px;
+    z-index: 1000;
 }
 
 #social-links li {
-	float:left;
-	width:30px;
+    float: left;
+    width: 30px;
 }
 
-
 #social-links a {
-	display:block;
-	line-height:4em;
-	text-align:center;
-	color:white;
+    display: block;
+    line-height: 4em;
+    text-align: center;
+    color: white;
 }
 
 .social-button {
-	display:block;
-	height:30px;
-	opacity:0.7;
+    display: block;
+    height: 30px;
+    opacity: 0.7;
 }
 
-#language-bar  {
-	min-height:64px;
-	position:fixed;
-	right:5px;
-	z-index:1000;
-	display:none;
+#language-bar {
+    min-height: 64px;
+    position: fixed;
+    right: 5px;
+    z-index: 1000;
+    display: none;
 }
 
 #language-bar li {
-	float:left;
-	width:30px;
+    float: left;
+    width: 30px;
 }
 
 #language-bar a {
-	display:block;
-	line-height:4em;
-	text-align:center;
-	color:white;
-	
+    display: block;
+    line-height: 4em;
+    text-align: center;
+    color: white;
 }
 
 a.uppercase {
-	text-transform: uppercase;
-	text-decoration:none;
-	color:white;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
 }
 
 main {
-	position:absolute;
-	height:100%;
-	min-height:400px;
-	width:100%;
-	background-color: transparent;
-	overflow: visible;
+    position: absolute;
+    height: 100%;
+    min-height: 400px;
+    width: 100%;
+    background-color: transparent;
+    overflow: visible;
 }
 
 button {
-	font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
+    font-family: 'Share Tech Mono', 'Anonymous Pro', 'Inconsolata', monospace;
 }
 
 .logo {
-	width:150px;
-	position:absolute;
-	transform: translate(-35px, -140px);
+    width: 150px;
+    position: absolute;
+    transform: translate(-35px, -140px);
 }
 
 .pseudo-equalizer {
-	width:320px;
-	height:170px;
-	position:absolute;
-	transform: translate(-119px, 10px);
+    width: 320px;
+    height: 170px;
+    position: absolute;
+    transform: translate(-119px, 10px);
 }
 
 #player {
-
-	display:block;
-	min-width:320px;
-	z-index:10;
-	position:fixed;
-	top:39%;
-	bottom:45%;
-	right:50%;
-	left:38.5%;
+    display: block;
+    min-width: 320px;
+    z-index: 10;
+    position: fixed;
+    top: 39%;
+    bottom: 45%;
+    right: 50%;
+    left: 38.5%;
 }
 
-
 #controls {
-	    position: relative;
-	    right: 10px;
+    position: relative;
+    right: 10px;
 }
 
 #play-stop {
-	width:100px;
-	height:100px;
-	transform: translate(0px,20px);
-	border: 10px solid transparent;
-	border-radius:75px;
-	outline:none;
+    width: 100px;
+    height: 100px;
+    transform: translate(0px, 20px);
+    border: 10px solid transparent;
+    border-radius: 75px;
+    outline: none;
 }
 
 .stopped {
-	background: url("../style/img/player/play-button.png") no-repeat;
+    background: url("../style/img/player/play-button.png") no-repeat;
 }
 
 .played {
-	background: url("../style/img/player/play-button-active.png") no-repeat;
+    background: url("../style/img/player/play-button-active.png") no-repeat;
 }
 
 #volume-slider {
-	display:block;
-	border: 1px solid transparent;
-	max-width:340px;
-	height:5px;
-	margin:10px;
-	transform:translate(-110px, 90px);
+    display: block;
+    border: 1px solid transparent;
+    max-width: 340px;
+    height: 5px;
+    margin: 10px;
+    transform: translate(-110px, 90px);
 }
 
 #bitrade-switcher {
-	display:block;
+    display: block;
 }
 
 .bitrate-button {
-	width:50px;
-	margin-top:5px;
-	margin-right: 4px;
-	float:left;
-	border-radius: 5px;
-	outline:none;
-	background-color:#8695B1;
-	border: 3px solid white;
-	color:gray;
+    width: 50px;
+    margin-top: 5px;
+    margin-right: 4px;
+    float: left;
+    border-radius: 5px;
+    outline: none;
+    background-color: #8695B1;
+    border: 3px solid white;
+    color: gray;
 }
 
 .active {
-	width:50px;
-	margin-top:5px;
-	margin-right: 4px;
-	float:left;
-	border-radius: 5px;
-	outline:none;
-	border: 3px solid white;
-	background-color: #F1951C; 
-	color: #ffffff;
+    width: 50px;
+    margin-top: 5px;
+    margin-right: 4px;
+    float: left;
+    border-radius: 5px;
+    outline: none;
+    border: 3px solid white;
+    background-color: #F1951C;
+    color: #ffffff;
 }
 
 #lcd-screen {
-	display:block;
-	transform:translate(-127px, 80px); 
-	width:310px;
-	border:10px solid #56698F;
-	border-radius:5px;
-	background-color: #56698F;
-	height:45px;
-	margin:10px;
+    display: block;
+    transform: translate(-127px, 80px);
+    width: 310px;
+    border: 10px solid #56698F;
+    border-radius: 5px;
+    background-color: #56698F;
+    height: 45px;
+    margin: 10px;
 }
 
 #flip-button {
-	display:none;
+    display: none;
 }
 
 footer {
-	position:fixed;
-	color:#56698F;
-	text-align:center;
-	bottom:0;
-	width:100%;
-	background-color:transparent;
+    position: fixed;
+    color: #56698F;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
 }
 
-#flip-block, #chats-block, #left-popup, #fb-popup, #vk-popup {
-	display:none;
+#flip-block,
+#chats-block,
+#left-popup,
+#fb-popup,
+#vk-popup {
+    display: none;
 }
 
-
+з
 /* Styles for desktop START*/
 
 @media screen and (min-width: 850px) and (min-height: 600px) {
-    
     body {
-
-    	background: url('../style/img/backgroung.jpg');
-
+        background: url('../style/img/backgroung.jpg');
     }
-
     #player {
-        top:35%;
-		bottom:45%;
-		left:47%;
-		right:47%;
+        top: 35%;
+        bottom: 45%;
+        left: 47%;
+        right: 47%;
     }
-
     .pseudo-equalizer {
-	    opacity: 0.7;
+        opacity: 0.7;
     }
-
     #flip-block {
-		display:block;
-		min-height:64px;
-		position:fixed;
-		left: 5px;
-	    bottom: 5px;
-		z-index:1000;
-	}
-
-	#flip-block li {
-
-	}
-
-	.flip-button {
-		display:block;
-		height:27px;
-		opacity:0.7;
-	}
-
-	.flip-button-main {
-		transform:translate(20px, 0px);
-		height:28px;
-		width:180px;
-	}
-
-	#chats-block {
-		display:block;
-		min-height:64px;
-		position:fixed;
-		right: 5px;
-	    bottom: 10px;
-		z-index:1000;
-	}
-
-	.chat-button {
-		display: block;
-	    height: 27px;
-	    opacity: 0.7;
-	}
-
-	.chat-button-head {
-		transform:translate(50px, 0px);
-	}
-
-
-	#chat-social-btn-block {
-		display:block;
-		width:200px;
-		transform: translate(-25px, 0px);
-	}
-
-	.chat-button-main {
-		float:right;
-		margin-right: -11px;
-	}
-
-	#left-popup {
-		top:12%;
-		left:10px;
-		width:30%;
-		height:70%;
-	}
-
-	#left-popup.popup-hidden {
-		display:none;
-	}
-
-	#left-popup.popup-visible {
-		display: block;
-		position: fixed;
-		background-color: #D8DCEE;
-		border: 10px solid #D8DCEE;
-		border-radius:10px;
-	}
-
-
-	#fb-popup {
-		top:12%;
-		right:10px;
-		width:30%;
-		height:70%;
-	}
-
-	#fb-popup.popup-hidden {
-		display:none;
-	}
-
-	#fb-popup.popup-visible {
-		display: block;
-		position: fixed;
-		background-color: #D8DCEE;
-		border: 10px solid #D8DCEE;
-		border-radius:10px;
-	}
-
-	#vk-popup {
-		top:12%;
-		right:10px;
-		width:30%;
-		height:70%;
-	}
-
-	#vk-popup.popup-hidden {
-		display:none;
-	}
-
-	#vk-popup.popup-visible {
-		display: block;
-		position: fixed;
-		background-color: #D8DCEE;
-		border: 10px solid #D8DCEE;
-		border-radius:10px;
-	}
-
-	.popup-title {
-		text-align:center;
-	}
-
+        display: block;
+        min-height: 64px;
+        position: fixed;
+        left: 5px;
+        bottom: 5px;
+        z-index: 1000;
+    }
+    #flip-block li {}
+    .flip-button {
+        display: block;
+        height: 27px;
+        opacity: 0.7;
+    }
+    .flip-button-main {
+        transform: translate(20px, 0px);
+        height: 28px;
+        width: 180px;
+    }
+    #chats-block {
+        display: block;
+        min-height: 64px;
+        position: fixed;
+        right: 5px;
+        bottom: 10px;
+        z-index: 1000;
+    }
+    .chat-button {
+        display: block;
+        height: 27px;
+        opacity: 0.7;
+    }
+    .chat-button-head {
+        transform: translate(50px, 0px);
+    }
+    #chat-social-btn-block {
+        display: block;
+        width: 200px;
+        transform: translate(-25px, 0px);
+    }
+    .chat-button-main {
+        float: right;
+        margin-right: -11px;
+    }
+    #left-popup {
+        top: 12%;
+        left: 10px;
+        width: 30%;
+        height: 70%;
+    }
+    #left-popup.popup-hidden {
+        display: none;
+    }
+    #left-popup.popup-visible {
+        display: block;
+        position: fixed;
+        background-color: #D8DCEE;
+        border: 10px solid #D8DCEE;
+        border-radius: 10px;
+    }
+    #fb-popup {
+        top: 12%;
+        right: 10px;
+        width: 30%;
+        height: 70%;
+    }
+    #fb-popup.popup-hidden {
+        display: none;
+    }
+    #fb-popup.popup-visible {
+        display: block;
+        position: fixed;
+        background-color: #D8DCEE;
+        border: 10px solid #D8DCEE;
+        border-radius: 10px;
+    }
+    #vk-popup {
+        top: 12%;
+        right: 10px;
+        width: 30%;
+        height: 70%;
+    }
+    #vk-popup.popup-hidden {
+        display: none;
+    }
+    #vk-popup.popup-visible {
+        display: block;
+        position: fixed;
+        background-color: #D8DCEE;
+        border: 10px solid #D8DCEE;
+        border-radius: 10px;
+    }
+    .popup-title {
+        text-align: center;
+    }
 }
 
+
 /*END*/
+
 
 /* Mini-version of player START*/
 
 @media screen and (max-width: 521px) and (max-height: 401px) {
-	
-	.logo {
-	    position:absolute;
-	    transform: translate(-180px, -55px);
-	}
-
-	.pseudo-equalizer {
-		position: absolute;
-	    transform: translate(-15px, -96px);
-	    height:200px;
-	}
-
-	button#play-stop {
-	    transform: translate(105px, -90px);
-	}
-
-	div#volume-slider {
-		transform: translate(-5px, -80px);
-	}
-
-	div#bitrate-switcher {
-		transform: translate(100px, -90px);
-	}
-
-	div#lcd-screen {
-		transform: translate(-21px, -52px);
-		border-top-right-radius: 0;
-		border-top-left-radius: 0;
-	}
-
-	#flip-button {
-		display:block;
-		height:28px;
-		width:400px;
-		transform: translate(-140px, -55px);
+    .logo {
+        position: absolute;
+        transform: translate(-180px, -55px);
+    }
+    .pseudo-equalizer {
+        position: absolute;
+        transform: translate(-15px, -96px);
+        height: 200px;
+    }
+    button#play-stop {
+        transform: translate(105px, -90px);
+    }
+    div#volume-slider {
+        transform: translate(-5px, -80px);
+    }
+    div#bitrate-switcher {
+        transform: translate(100px, -90px);
+    }
+    div#lcd-screen {
+        transform: translate(-21px, -52px);
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+    #flip-button {
+        display: block;
+        height: 28px;
+        width: 400px;
+        transform: translate(-140px, -55px);
+    }
+    footer {
+        display: none;
+    }
 }
 
-	footer {
-		display:none;
-	}
-}
 
 /* END*/
