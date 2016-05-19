@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+
+/*
+	 MESSAGE
+
+============================================================================*/
+
+div.ctComponent-message {
+	z-index: 20000;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	text-align: left;
+	background: #fff;
+	font-size: 13px;
+	left: 50%;
+	line-height: 20px;
+	margin-left: -25%;
+	min-width: 400px;
+	position: fixed;
+	top: 0;
+	width: 50%;
+	vertical-align: middle;
+
+	background: #c8c8c8 url("/img/admin/bg-system-message.png") repeat-x scroll left top;
+	border: 1px solid #c8c8c8;
+}
+div.ctComponent-message div.wrapper {padding: 5px 26px 10px 15px;}
+div.ctComponent-message div.rawText {margin: 5px 15px 10px 15px; max-height: 300px; overflow: auto;	text-align: left;/*background: #f1f2f3;*/}
+div.ctComponent-message p {margin: 0; text-align: center;}
+/*div.ctComponent-message p.message {color: #0aa3f2;}*/
+/*div.ctComponent-message p.warning {color: orange;}*/
+/*div.ctComponent-message p.error {color: #d00;}*/
+
+div.ctComponent-message a.closeButton {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 8px;
+	height: 8px;
+	text-decoration: none;
+	border: none;
+
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-image: url("./img/close.png");
+}
+div.ctComponent-message a.closeButton:hover {text-decoration: none; background-image: url("./img/close.png")}
+div.ctComponent-message a.closeButton:active {text-decoration: none; background-image: url("./img/close.png")}
+
+div.ctComponent-message.error {color: #ef0c0c;}
+div.ctComponent-message.error a {color: #ef0c0c;text-decoration: underline;}
+div.ctComponent-message.warning {color: #000; }
+div.ctComponent-message.warning a {color: #000; text-decoration: underline;}
+div.ctComponent-message.info {color: #000; }
+div.ctComponent-message.info a {color: #000; text-decoration: underline;}
+
+
+/*
+	LOADERs
+
+============================================================================*/
+
+div.ctComponent-loader {
+	position: fixed;
+	z-index: 10000;
+	left: 0;
+	top: 0;
+	margin-top: 0;
+	margin-left: 15px;
+	width: 26px;
+	height: 5px;
+	overflow: hidden;
+	background: transparent url('./img/loader-mouse.gif') no-repeat scroll;}
+
+.ctComponent-blockLoader {
+	width: 300px;
+	height: 200px;
+	background: transparent no-repeat scroll center center;
+}
+
+.ctComponent-blockLoader.dark {
+	background-image: url("./img/loader-round-dark.gif");
+}
+
+.ctComponent-roundLoader {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: no-repeat scroll center center;
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+	background-image: url("./img/loader-round-dark.gif");
+	background-color: #FEF200;
+}
+
+/*
+	SHADE
+
+============================================================================*/
+
+div.ctComponentShade {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	z-index: 100;
+	background-color: #000;
+}
+
+div.ctComponentShade.yellow {
+	background-color: yellow;
+}

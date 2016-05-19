@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+.readonly {
+	background-color: #ddd;
+}
+
+/*
+	BANNERs
+
+============================================================================*/
+
+.banner.banner-top {
+	width: 730px;
+	height: 90px;
+}
+
+.banner.banner-right {
+	width: 210px;
+	height: 300px;
+}
+
+
+/*
+	CONTROL PANEL
+
+============================================================================*/
+
+div.controlPanel {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 20px;
+	padding: 3px;
+	height: 22px;
+	overflow: hidden;
+	font-size: 13px;
+	line-height: 16px;
+	font-family: "arial", tahoma, verdana, serif;
+	/*background: #fff;*/
+	opacity: 0.6;
+	z-index: 20000;
+	-moz-transition: opacity 300ms linear 500ms, width 300ms linear 700ms;
+	-o-transition: opacity 300ms linear 500ms, width 300ms linear 700ms;
+	-webkit-transition: opacity 300ms linear 500ms, width 300ms linear 700ms;
+	transition: opacity 300ms linear 500ms, width 300ms linear 700ms;
+
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+div.controlPanel:hover {
+	opacity: 0.9;
+	width: 1000px;
+	-moz-transition: opacity 300ms linear 200ms, width 300ms linear 0ms;
+	-o-transition: opacity 300ms linear 200ms, width 300ms linear 0ms;
+	-webkit-transition: opacity 300ms linear 200ms, width 300ms linear 0ms;
+	transition: opacity 300ms linear 200ms, width 300ms linear 0ms;
+}
+div.controlPanel ul.controlPanel-navigation {padding: 3px; overflow: hidden; color: #000;}
+div.controlPanel:hover ul.controlPanel-navigation {}
+div.controlPanel ul.controlPanel-navigation li {display: inline;}
+div.controlPanel ul.controlPanel-navigation span.value {color: #ff1493;font-weight: bold;}
+div.controlPanel ul.controlPanel-navigation a {color: #000; padding: 1px 2px; }
+div.controlPanel ul.controlPanel-navigation a#menu-executionTime {text-decoration: none; cursor: default;}
+div.controlPanel ul.controlPanel-navigation a#menu-memoryCommit {text-decoration: none; cursor: default;}
+div.controlPanel ul.controlPanel-navigation a#menu-dbQueries {text-decoration: none; border-bottom: 1px dashed #000;}
+div.controlPanel ul.controlPanel-navigation a#menu-includedFiles {text-decoration: none; border-bottom: 1px dashed #000;}
+div.debugPopup {
+	position: fixed;
+	padding: 3px 23px 3px 3px;
+	top: 20px;
+	left: 0;
+	width: 70%;
+	max-height: 80%;
+	overflow: auto;
+	color: #000;
+	white-space: nowrap;
+	font-family: consolas, 'lucida console', monospace;
+	font-size: 12px;
+	line-height: 13px;
+	background: none repeat scroll 0 0 #fff;
+	opacity: 0.95;
+	z-index: 20000;
+	border: 1px solid #7D7D7D;
+}
+
+div.debugPopup h4 {line-height: 30px; font-size: 150%;}
+div.debugPopup h4 span {font-weight: bold;}
+
+div.debugPopup table.query td div {padding: 1px 3px; margin: 1px 3px;}
+div.debugPopup table.query td.queryItem-num div {}
+div.debugPopup table.query td.queryItem-time div {background-color: #ff8c00; color:#333;}
+div.debugPopup table.query td.queryItem-time.s div {background-color: #adff2f; color:#333;}
+div.debugPopup table.query td.queryItem-query div {}
+
+div.debugPopup .debugPopup-close {
+	display: block;
+	position: fixed;
+	left: 66%;
+	top: 30px;
+	padding: 5px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #ff8c00;
+	text-decoration: none;
+}
+
+
+
+/*
+	GENERIC ELEMENT
+
+============================================================================*/
+
+html, body {
+	height: 100%;
+}
+
+.clr {
+	clear: both;
+	display: block;
+	height: 0!important;
+	line-height: 0!important;
+	font-size: 0!important;
+	padding: 0!important;
+	margin: 0!important;
+}
+
+.relative {
+	position: relative;
+}
+
+.hidden {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	background: none;
+	border: none;
+	left: -10000px;
+}
+
+.ctConfig {
+	display: none !important;
+}
+
+.ctPlayer {
+	position: fixed;
+	top: 0;
+	display: block;
+	z-index: 2000;
+}
+
+.chatCont {
+	display: none; 
+}
+
+.ctInitializing * {
+	display: none;
+}
+
+.ctInitializing-text {
+	display: none;
+}
+
+.ctInitializing .ctInitializing-text {
+	display: block !important;
+	background-color: #FFFCD2;
+	color: black;
+	padding: 5px;
+	font-size: 12px;
+	border-radius: 3px; /* Gecko (Firefox) */
+	-moz-border-radius: 3px; /* WebKit (Safari/Chrome) */
+	-webkit-border-radius: 3px; /* KHTML (Konquerer) */
+	-khtml-border-radius: 3px;
+	/*background: transparent url("/img/") no-repeat scroll left top;*/
+}
+
+.ctLoading-loader {
+	display: none;
+}
+
+.ctLoading > .ctLoading-loader {
+	display: block;
+}
+
+/*
+	USER TEXT
+
+============================================================================*/
+
+.userText {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #101010;
+	font-size: 13px;
+	line-height: 130%;
+}
+
+.userText .ctRte.bold {font-weight: bold;}
+
+.userText .ctRte.italic {font-style: italic;}
+
+.userText .ctRte.forecolor.black {color: #101010;}
+.userText .ctRte.forecolor.grey {color: #7b7b7b;}
+.userText .ctRte.forecolor.yellow {color: #ffee00;}
+
+.userText .ctRte.hilitecolor.black {background-color: #101010;}
+.userText .ctRte.hilitecolor.grey {background-color: #7b7b7b;}
+.userText .ctRte.hilitecolor.yellow {background-color: #ffee00;}
+.userText .ctRte.hilitecolor.white {background-color: #fff;}
+.userText .ctRte.hilitecolor.green {background-color: #7fff00;}
+
+.userText .ctRte.justifycenter {text-align: center;}
+
+.userText .ctRte.noteright {
+	padding: 20px;
+	/*font-size: 24px;*/
+	font-size: 2em;
+	line-height: 130%;
+	float: right;
+	color: #101010;
+	width: 260px;
+	text-align: left;
+}
+
+
