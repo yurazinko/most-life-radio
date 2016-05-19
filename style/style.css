@@ -207,7 +207,7 @@ footer {
     display: none;
 }
 
-/* Styles for desktop START*/
+/* Styles for desktop BEGIN*/
 
 @media screen and (min-width: 850px) and (min-height: 600px) {
     body {
@@ -323,7 +323,7 @@ footer {
 /*END*/
 
 
-/* Mini-version of player START*/
+/* Mini-version of player BEGIN*/
 
 @media screen and (max-width: 521px) and (max-height: 251px) {
   
