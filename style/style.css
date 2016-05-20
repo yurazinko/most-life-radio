@@ -158,6 +158,7 @@ button {
     float: left;
     border-radius: 5px;
     outline: none;
+    text-align:center;
     background-color: #8695B1;
     border: 3px solid white;
     color: gray;
