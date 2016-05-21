@@ -63,6 +63,13 @@
             <h3 class="popup-title">VK chat</h3>
         </div>
         <div id="player" class="ctPlayer">
+        <div class="ctConfig" style="display:none;">
+		{"radio":[
+			{"name":"MostLIVE","channel":[
+				{"bitrate":128,"url":"http:\/\/eu.radioboss.fm:8036\/stream"}
+			]}
+		],"autoPlay":false}
+		</div>
             <div class="ctPlayer-player-wrapper">
                 <div id="anonymous_element_1_wrapper" style="position: relative; width: 1px; height: 1px;">
                     <object type="application/x-shockwave-flash" data="./Most-Life_files/player.swf" width="100%" height="100%" bgcolor="#000000" id="anonymous_element_1" name="anonymous_element_1" tabindex="0">
@@ -135,7 +142,8 @@
 </body>
 <!--External scripts BEGIN-->
 <script id="facebook-jssdk " src="http://connect.facebook.net/uk_UA/sdk.js#xfbml=1&amp;version=v2.5 "></script>
-<script src="./Most-Life_files/jquery.min.js "></script>
+<script src="source/Most-Life_files/jquery.min.js "></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="source/Most-Life_files/prototype.js "></script>
 <script type="text/javascript" src="source/Most-Life_files/swfobject.js "></script>
 <script type="text/javascript" src="source/Most-Life_files/scriptaculous.js "></script>
@@ -158,7 +166,9 @@ VK.init({
     onlyWidgets: true
 });
 </script>
-<script type="text/javascript " src="./Most-Life_files/dragdrop.js "></script>
+<script type="text/javascript " src="source/Most-Life_files/dragdrop.js "></script>
+<script language="javascript" type="text/javascript" src="https://eu.radioboss.fm:2199/system/streaminfo.js"></script>
+<script type="text/javascript" src="source/js/status.js"></script>
 <!--END-->
 <!-- Native scripts BEGIN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js "></script>

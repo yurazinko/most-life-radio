@@ -101,8 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
         case '1,16':
         case '3,16':
-	        currentProgTitle.innerHTML = 'Програма Наталки Данилко';
-	        currentProgAuthor.innerHTML = 'Наталка Данилко';
+	        currentProgTitle.innerHTML = 'Вільна Кава';
+	        currentProgAuthor.innerHTML = 'Наталя';
 	        break;
 	    case '1,18':
 		    currentProgTitle.innerHTML = 'Мостиські Набутки';
