@@ -104,12 +104,18 @@ document.addEventListener('DOMContentLoaded', function() {
 	        currentProgTitle.innerHTML = 'Програма Наталки Данилко';
 	        currentProgAuthor.innerHTML = 'Наталка Данилко';
 	        break;
-	    case '1:18':
+	    case '1,18':
 		    currentProgTitle.innerHTML = 'Мостиські Набутки';
 		    currentProgAuthor.innerHTML = 'Олег Макар';
+		    break;
 		case '2,16':
 			currentProgTitle.innerHTML = 'Теорія Успіху';
-			currentProgAuthor.innerHTML = 'Павло Тарчанин';        
+			currentProgAuthor.innerHTML = 'Павло Тарчанин';
+			break;
+		case '2,17':
+			currentProgTitle.innerHTML = 'Психологія';
+			currentProgramAuthor.innerHTML = 'Уляна Кубара';
+			break;	        
     }
 
 })
