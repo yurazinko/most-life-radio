@@ -338,7 +338,7 @@ footer {
         transform: translate(-15px, -96px);
         height: 200px;
     }
-    button#play-stop {
+    div#play-stop {
         transform: translate(105px, -90px);
     }
     div#volume-slider {

@@ -51,13 +51,16 @@
     </header>
     <main>
         <div id="left-popup" class="popup-hidden">
-            <h2 class="popup-title">On Air now:</h2>
+            <h3 class="popup-title">On Air now:</h3>
+            <h2 id = "program-title">Program title</h2>
+            <h4 id = "program-author">Program author</h4>
+            <p id = "program-description">Information about the program which running on air now</p>
         </div>
         <div id="fb-popup" class="popup-hidden">
-            <h2 class="popup-title">Facebook chat</h2>
+            <h3 class="popup-title">Facebook chat</h3>
         </div>
         <div id="vk-popup" class="popup-hidden">
-            <h2 class="popup-title">VK chat</h2>
+            <h3 class="popup-title">VK chat</h3>
         </div>
         <div id="player" class="ctPlayer">
             <div class="ctPlayer-player-wrapper">
@@ -71,46 +74,35 @@
                     </object>
                 </div>
             </div>
-
-
             <div class="ctPlayer-panel">
-
                 <img class="logo" src="style/img/player/main-logo.png" alt="Radio Logo">
                 <img class="pseudo-equalizer" src="style/img/player/pseudo-equalizer.png" alt="Equalizer">
                 <div id="logo"></div>
                 <div id="controls">
-
-                    
                     <a href="javascript:void(0)" class="ctPlayer-btn-play ">
-                    	<div id="play-stop" class="stopped" onclick="togglePlayer()"></div>
+                        <div id="play-stop" class="stopped" onclick="togglePlayer()"></div>
                     </a>
-                        <span class="ctPlayer-btn-play-inner"></span>
-           
-                    
-
-
+                    <span class="ctPlayer-btn-play-inner"></span>
                     <div id="volume-slider" class="ctPlayer-volume">
                         <div class="ctPlayer-volume-slider">
                             <section class="ctPlayer-volume-slider-inner">
                                 <div class="ctPlayer-volume-slider-value">
                                     <a href="javascript:void(0)" class="ctPlayer-volume-slider-handler">
-                                    <div id="slider"></div>	
+                                        <div id="slider"></div>
                                     </a>
                                 </div>
                             </section>
                         </div>
                     </div>
-
-
                     <div id="bitrate-switcher" class="ctPlayer-bitrate">
                         <div class="bitrate-button">64</div>
-                        <a href="javascript:void(0)" class="ctPlayer-btn-bitrate"><div class="bitrate-button active">128</div></a>
+                        <a href="javascript:void(0)" class="ctPlayer-btn-bitrate">
+                            <div class="bitrate-button active">128</div>
+                        </a>
                     </div>
-
                 </div>
                 <div id="lcd-screen"></div>
                 <a href="http://mostyska.net.ua/radio" target="_blank"><img id="flip-button" src="style/img/flip-button-sm-p.png" alt="Flip Button"></a>
-
             </div>
         </div>
     </main>
@@ -176,7 +168,7 @@ VK.init({
 <script>
 new WOW().init();
 </script>
-<script type="text/javascript " src="script/main.js "></script>
+<script type="text/javascript " src="script/main.js"></script>
 <!--END-->
 
 </html>

@@ -77,6 +77,44 @@ function togglePopUpVk() {
     }
 }
 
+/*On-air description switcher*/
+document.addEventListener('DOMContentLoaded', function() {
+    var generalDate = new Date();
+    var dayOfWeek = generalDate.getDay();
+    var hour = generalDate.getHours();
+    var minute = generalDate.getMinutes();
+    var specificTime = dayOfWeek.toString() + ',' + hour.toString();
+    console.info('Current day and hour is: ' + specificTime);
+    console.info('Current minute is: ' + minute);
+    var currentProgTitle = document.getElementById('program-title');
+    var currentProgAuthor = document.getElementById('program-author');
+    var currentProgDesc = document.getElementById('program-description');
+
+    switch (specificTime) {
+        case '1,12':
+        case '3,12':
+            if (minute >= 30) {
+                currentProgTitle.innerHTML = 'Музичний Мармеляд';
+                currentProgAuthor.innerHTML = 'Стефцьо і Ромцьо';
+            }
+            break;
+            
+        case '1,16':
+        case '3,16':
+	        currentProgTitle.innerHTML = 'Програма Наталки Данилко';
+	        currentProgAuthor.innerHTML = 'Наталка Данилко';
+	        break;
+	    case '1:18':
+		    currentProgTitle.innerHTML = 'Мостиські Набутки';
+		    currentProgAuthor.innerHTML = 'Олег Макар';
+		case '2,16':
+			currentProgTitle.innerHTML = 'Теорія Успіху';
+			currentProgAuthor.innerHTML = 'Павло Тарчанин';        
+    }
+
+})
+
+
 /* Volume slider */
 $(function() {
 
