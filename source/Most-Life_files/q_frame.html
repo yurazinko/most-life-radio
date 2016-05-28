@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0036)https://queuev4.vk.com/q_frame.php?7 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" hc="b0" hcx="0"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<style type="text/css"></style></head>
+
+<body>
+
+<script type="text/javascript">
+
+var full_domain = location.host;
+var main_domain = full_domain.toString().match(/[a-zA-Z]*\.[a-zA-Z]*$/)[0];
+var requestHolderName = ((location.search.match(/holder=([a-zA-Z0-9_]+)/) || {})[1] || '');
+
+var ajax = {
+  _init: function() {
+    var r = false;
+    try {
+      if (r = new XMLHttpRequest()) {
+        ajax._req = function() { return new XMLHttpRequest(); }
+        return;
+      }
+    } catch(e) {}
+    each(['Msxml2.XMLHTTP', 'Microsoft.XMLHTTP'], function() {
+      try {
+        var t = '' + this;
+        if (r = new ActiveXObject(t)) {
+          (function(n) {
+            ajax._req = function() { return new ActiveXObject(n); }
+          })(t);
+          return false;
+        }
+      } catch(e) {}
+    });
+  },
+  _getreq: function() {
+    if (!ajax._req) ajax._init();
+    return ajax._req();
+  },
+  plainpost: function(url, query, done, fail) {
+    var r = ajax._getreq();
+    var q = (typeof(query) != 'string') ? ajx2q(query) : query;
+    r.onreadystatechange = function() {
+      if (r.readyState == 4) {
+        if (r.status >= 200 && r.status < 300) {
+          if (done) done(r.responseText, r);
+        } else {
+          if (fail) fail(r.responseText, r);
+        }
+      }
+    }
+    try {
+      r.open('POST', url, true);
+    } catch(e) {
+      debugLog(e);
+    }
+    r.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    r.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    r.send(q);
+    return r;
+  }
+}
+
+var _logTimer = (new Date()).getTime();
+function debugLog(msg){
+  try {
+    var t = '[' + (((new Date()).getTime() - _logTimer) / 1000) + '] ';
+    if (window.console && console.log) {
+      Array.prototype.unshift.call(arguments, t);
+      console.log.apply(console, arguments);
+    }
+  } catch (e) {
+  }
+}
+
+function isFunction(obj) {return Object.prototype.toString.call(obj) === '[object Function]'; }
+function isArray(obj) { return Object.prototype.toString.call(obj) === '[object Array]'; }
+function isEmpty(o) { if(Object.prototype.toString.call(o) !== '[object Object]') {return false;} for(var i in o){ if(o.hasOwnProperty(i)){return false;} } return true; }
+
+function ajx2q(qa) {
+  var query = [], enc = function (str) {
+    try {
+      return encodeURIComponent(str);
+    } catch (e) { return str;}
+  };
+
+  for (var key in qa) {
+    if (qa[key] == null || isFunction(qa[key])) continue;
+    if (isArray(qa[key])) {
+      for (var i = 0, c = 0; i < qa[key].length; ++i) {
+        if (qa[key][i] == null || isFunction(qa[key][i])) {
+          continue;
+        }
+        query.push(enc(key) + '[' + c + ']=' + enc(qa[key][i]));
+        ++c;
+      }
+    } else {
+      query.push(enc(key) + '=' + enc(qa[key]));
+    }
+  }
+  query.sort();
+  return query.join('&');
+}
+
+function start() {
+  if (window.ajax) {
+    document.domain = main_domain;
+    try {
+      var requestHolderParent = requestHolderName ? parent.cur : parent;
+      var requestHolder = (requestHolderName == 'notifier') ? 'notifier' : 'curNotifier';
+      if (requestHolderParent && requestHolderParent[requestHolder]) {
+        requestHolderParent[requestHolder].lpMakeRequest = function(url, params, onDone, onFail) {
+          if (!url.match(/^im\d+/)) return;
+          setTimeout(function () {
+            try {
+              document.domain = full_domain;
+              if (window.cur_ajax) {
+                cur_ajax.abort();
+              }
+            } catch(e) {}
+            window.cur_ajax = ajax.plainpost(url, params, onDone, onFail);
+            try {
+              document.domain = main_domain;
+            } catch(e) {}
+          }, 0);
+        }
+      } else {
+        setTimeout(start, 100);
+      }
+    } catch (e) {
+      try {
+        document.domain = full_domain;
+      } catch(e) {}
+      setTimeout(start, 100);
+    }
+  } else {
+    setTimeout(start, 100);
+  }
+}
+start();
+
+</script>
+
+
+
+
+<div id="hc_extension_bkgnd" style="position: fixed; left: 0px; top: 0px; right: 0px; bottom: 0px; z-index: -1999999999; display: block; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"></div><span id="hc_extension_svg_filters" hidden=""><svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><filter id="hc_extension_off"><fecomponenttransfer><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb></fecomponenttransfer></filter><filter id="hc_extension_highcontrast"><fecomponenttransfer><fefuncr type="gamma" exponent="3.0"></fefuncr><fefuncg type="gamma" exponent="3.0"></fefuncg><fefuncb type="gamma" exponent="3.0"></fefuncb></fecomponenttransfer></filter><filter id="hc_extension_highcontrast_back"><fecomponenttransfer><fefuncr type="gamma" exponent="0.33"></fefuncr><fefuncg type="gamma" exponent="0.33"></fefuncg><fefuncb type="gamma" exponent="0.33"></fefuncb></fecomponenttransfer></filter><filter id="hc_extension_grayscale"><fecolormatrix type="matrix" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0"></fecolormatrix><fecomponenttransfer><fefuncr type="gamma" exponent="3"></fefuncr><fefuncg type="gamma" exponent="3"></fefuncg><fefuncb type="gamma" exponent="3"></fefuncb></fecomponenttransfer></filter><filter id="hc_extension_grayscale_back"><fecomponenttransfer><fefuncr type="gamma" exponent="0.33"></fefuncr><fefuncg type="gamma" exponent="0.33"></fefuncg><fefuncb type="gamma" exponent="0.33"></fefuncb></fecomponenttransfer></filter><filter id="hc_extension_invert"><fecomponenttransfer><fefuncr type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncr><fefuncg type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncg><fefuncb type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncb></fecomponenttransfer></filter><filter id="hc_extension_invert_back"><fecomponenttransfer><fefuncr type="table" tableValues="1 0"></fefuncr><fefuncg type="table" tableValues="1 0"></fefuncg><fefuncb type="table" tableValues="1 0"></fefuncb></fecomponenttransfer><fecomponenttransfer><fefuncr type="gamma" exponent="1.7"></fefuncr><fefuncg type="gamma" exponent="1.7"></fefuncg><fefuncb type="gamma" exponent="1.7"></fefuncb></fecomponenttransfer></filter><filter id="hc_extension_invert_grayscale"><fecolormatrix type="matrix" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0"></fecolormatrix><fecomponenttransfer><fefuncr type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncr><fefuncg type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncg><fefuncb type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncb></fecomponenttransfer></filter><filter id="hc_extension_yellow_on_black"><fecomponenttransfer><fefuncr type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncr><fefuncg type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncg><fefuncb type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncb></fecomponenttransfer><fecolormatrix type="matrix" values="0.3 0.5 0.2 0 0 0.3 0.5 0.2 0 0 0 0 0 0 0 0 0 0 1 0"></fecolormatrix></filter><filter id="hc_extension_yellow_on_black_back"><fecomponenttransfer><fefuncr type="table" tableValues="1 0"></fefuncr><fefuncg type="table" tableValues="1 0"></fefuncg><fefuncb type="table" tableValues="1 0"></fefuncb></fecomponenttransfer><fecomponenttransfer><fefuncr type="gamma" exponent="0.33"></fefuncr><fefuncg type="gamma" exponent="0.33"></fefuncg><fefuncb type="gamma" exponent="0.33"></fefuncb></fecomponenttransfer></filter></defs></svg></span></body></html>

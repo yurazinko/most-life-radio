@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Most Live Radio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- External styles BEGIN-->
+    <link rel="stylesheet" type="text/css" href="source/Most-Life_files/jScrollPane.css">
+    <link rel="stylesheet" type="text/css" href="source/Most-Life_files/chat.css">
+    <link href="source/Most-Life_files/status.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="http://mostyska.net.ua/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="http://mostyska.net.ua/favicon.ico" rel="shortcut icon">
+    <!--END-->
+    <!-- Native styles BEGIN-->
+    <link rel="stylesheet" type="text/css" href="style/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono|Anonymous+Pro|Inconsolata&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style/animate.css">
+    <link rel="stylesheet" type="text/css" href="style/slider.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <!-- END -->
+</head>
+
+<body>
+    <header>
+        <div id="social-links">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/MostLive"><img class="social-button hover" src="style/img/social-buttons/facebook-button.png" alt="Facebook"></a>
+                </li>
+                <li>
+                    <a href="https://vk.com/radio.most.live"><img class="social-button hover" src="style/img/social-buttons/vk-button.png" alt="VK"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/most_live_radio"><img class="social-button hover" src="style/img/social-buttons/twitter-button.png" alt="Twitter"></a>
+                </li>
+                <li>
+                    <a href="#"><img class="social-button hover" src="style/img/social-buttons/instagram-button.png" alt="Instagram"></a>
+                </li>
+            </ul>
+        </div>
+        <div id="language-bar">
+            <ul>
+                <li><a class="langlink" href="#">ua</a></li>
+                <li><a class="langlink" href="#">pl</a></li>
+                <li><a class="langlink" href="#">eng</a></li>
+                <li><a class="langlink" href="#">ru</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div id="left-popup" class="popup-hidden">
+            <h3 class="popup-title">On Air now:</h3>
+            <h2 id = "program-title">Program title</h2>
+            <h4 id = "program-author">Program author</h4>
+            <p id = "program-description">Information about the program which running on air now</p>
+        </div>
+        <div id="fb-popup" class="popup-hidden">
+            <h3 class="popup-title">Facebook chat</h3>
+        </div>
+        <div id="vk-popup" class="popup-hidden">
+            <h3 class="popup-title">VK chat</h3>
+        </div>
+        <div id="player" class="ctPlayer">
+        <div class="ctConfig" style="display:none;">
+		{"radio":[
+			{"name":"MostLIVE","channel":[
+				{"bitrate":128,"url":"http:\/\/eu.radioboss.fm:8036\/stream"}
+			]}
+		],"autoPlay":false}
+		</div>
+            <div class="ctPlayer-player-wrapper">
+                <div id="anonymous_element_1_wrapper" style="position: relative; width: 1px; height: 1px;">
+                    <object type="application/x-shockwave-flash" data="./Most-Life_files/player.swf" width="100%" height="100%" bgcolor="#000000" id="anonymous_element_1" name="anonymous_element_1" tabindex="0">
+                        <param name="allowfullscreen" value="true">
+                        <param name="allowscriptaccess" value="always">
+                        <param name="seamlesstabbing" value="true">
+                        <param name="wmode" value="opaque">
+                        <param name="flashvars" value="netstreambasepath=http%3A%2F%2Fmostyska.net.ua%2Fradio%2Fplayer&amp;id=anonymous_element_1&amp;className=ctPlayer-player&amp;provider=sound&amp;file=http%3A%2F%2Feu.radioboss.fm%3A8036%2Fstream&amp;volume=70&amp;autostart=true&amp;controlbar.position=over">
+                    </object>
+                </div>
+            </div>
+            <div class="ctPlayer-panel">
+                <img class="logo" src="style/img/player/main-logo.png" alt="Radio Logo">
+                <img class="pseudo-equalizer" src="style/img/player/pseudo-equalizer.png" alt="Equalizer">
+                <div id="logo"></div>
+                <div id="controls">
+                    <a href="javascript:void(0)" class="ctPlayer-btn-play ">
+                        <div id="play-stop" class="stopped" onclick="togglePlayer()"></div>
+                    </a>
+                    <span class="ctPlayer-btn-play-inner"></span>
+                    <div id="volume-slider" class="ctPlayer-volume">
+                        <div class="ctPlayer-volume-slider">
+                            <section class="ctPlayer-volume-slider-inner">
+                                <div class="ctPlayer-volume-slider-value">
+                                    <a href="javascript:void(0)" class="ctPlayer-volume-slider-handler">
+                                        <div id="slider"></div>
+                                    </a>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div id="bitrate-switcher" class="ctPlayer-bitrate">
+                        <div class="bitrate-button">64</div>
+                        <a href="javascript:void(0)" class="ctPlayer-btn-bitrate">
+                            <div class="bitrate-button active">128</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="lcd-screen"></div>
+                <a href="http://mostyska.net.ua/radio" target="_blank"><img id="flip-button" src="style/img/flip-button-sm-p.png" alt="Flip Button"></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="flip-block">
+            <ul>
+                <li><img class="flip-button" src="style/img/on-air-button-head.png" alt="on air now"></li>
+                <li>
+                    <a href="#" onclick="togglePopUpLeft()"><img class="flip-button flip-button-main hover" src="style/img/on-air-info-button.png" alt="on air button"></a>
+                </li>
+            </ul>
+        </div>
+        <div id="chats-block">
+            <ul>
+                <li><img class="chat-button chat-button-head" src="style/img/chat-button-head.png" alt="Chats"></li>
+                <li>
+                    <ul id="chat-social-btn-block">
+                        <li>
+                            <a href="#" onclick="togglePopUpVk()"><img class="chat-button chat-button-main hover" src="style/img/chat-button-vk.png" alt="VK chat"></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="togglePopUpFb()"><img class="chat-button chat-button-main hover" src="style/img/chat-button-facebook.png" alt="Facebook chat"></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <a href="https://github.com/yurazinko/most-life-radio">©</a> 2016 Most Live Radio
+    </footer>
+</body>
+<!--External scripts BEGIN-->
+<script id="facebook-jssdk " src="http://connect.facebook.net/uk_UA/sdk.js#xfbml=1&amp;version=v2.5 "></script>
+<script src="source/Most-Life_files/jquery.min.js "></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="source/Most-Life_files/prototype.js "></script>
+<script type="text/javascript" src="source/Most-Life_files/swfobject.js "></script>
+<script type="text/javascript" src="source/Most-Life_files/scriptaculous.js?load=effects""></script>
+<script type="text/javascript" src="source/Most-Life_files/effects.js "></script>
+<script type="text/javascript" src="source/Most-Life_files/ct.js "></script>
+<script type="text/javascript">var Ct_Page_Config = {baseUrl: " "};</script>
+<script type="text/javascript " src="source/Most-Life_files/Page.js "></script>
+<script type="text/javascript " src="source/Most-Life_files/Component.js "></script>
+<script type="text/javascript " src="source/Most-Life_files/Request.js "></script>
+<script type="text/javascript " src="source/Most-Life_files/Player.js "></script>
+<script type="text/javascript " src="source/js/jw/jwplayer.js"></script>
+<script type="text/javascript " src="source/Most-Life_files/openapi.js "></script>
+<script type="text/javascript ">
+VK.init({apiId: 2840388, onlyWidgets: true});
+</script>
+<script type="text/javascript " src="source/Most-Life_files/dragdrop.js "></script>
+<script language="javascript" type="text/javascript" src="https://eu.radioboss.fm:2199/system/streaminfo.js"></script>
+<script type="text/javascript" src="source/js/status.js"></script>
+<!--END-->
+<!-- Native scripts BEGIN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js "></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/jquery-ui.min.js "></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js "></script>
+<script type="text/javascript " src="script/wow-min.js "></script>
+<script>
+new WOW().init();
+</script>
+<script type="text/javascript " src="script/main.js"></script>
+<!--END-->
+
+</html>
