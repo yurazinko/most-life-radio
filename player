@@ -5,30 +5,14 @@
     <title>Most Live Radio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Радіо - Most-Life</title>
-    <link rel="stylesheet" type="text/css" href="chat/js/jScrollPane/jScrollPane.css" />
-    <link rel="stylesheet" type="text/css" href="chat/css/page.css" />
-    <link rel="stylesheet" type="text/css" href="chat/css/chat.css" />
     <link href="css/reset.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="css/generic.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="js/Ct/Component/style.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="css/status.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="../favicon.ico" rel="icon" type="image/x-icon" />
     <link href="../favicon.ico" rel="shortcut icon" />
-	<script type="text/javascript">
-	var Ct_Page_Config = {
-	    baseUrl: ""
-	};
-	</script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-	<script type="text/javascript" src="js/prototype.js"></script>
 	<script type="text/javascript" src="js/swfobject.js"></script>
 	<script type="text/javascript" src="js/effects/scriptaculous.js?load=effects"></script>
-	<script type="text/javascript" src="js/ct.js"></script>
-	<script type="text/javascript" src="js/Ct/Page.js"></script>
-	<script type="text/javascript" src="js/Ct/Component.js"></script>
-	<script type="text/javascript" src="js/Ct/Request.js"></script>
-	<script type="text/javascript" src="js/Ct/Player.js"></script>
 	<script type="text/javascript" src="js/jw/jwplayer.js"></script>
 	<script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>
 	<script type="text/javascript">
@@ -124,7 +108,6 @@ $(document).ready(function(){
                 <li><a class="langlink" href="#">ru</a></li>
             </ul>
         </div>
-       <!--  <a href="#"><div id="player-changer"><img class="social-button hover" src="style/img/change-player-button.png"></div></a> -->
     </header>
     <main>
         <div id="left-popup" class="popup-hidden">
@@ -134,7 +117,7 @@ $(document).ready(function(){
             <p id="program-description">Information about the program which running on air now</p>
         </div>
         <div id="fb-popup" class="popup-hidden">
-            <!-- Блок Фейсбука -->
+            <!-- Facebook block -->
             <iframe src="facebook-comments-plugin.html" width="100%" height="100%" align="center">
                     Error! Bad browser!
              </iframe>
@@ -147,58 +130,14 @@ $(document).ready(function(){
         <div>
         </div>
         
-        <div id="player" class="ctPlayer">
-            <div class="ctConfig">
-                {"radio":[ {"name":"MostLIVE","channel":[ {"bitrate":128,"url":"http:\/\/eu.radioboss.fm:8036\/stream"} ]} ],"autoPlay":false}
-            </div>
-            <div class="ctPlayer-player-wrapper" style="display:none;">
-                <div class="ctPlayer-player"></div>
-            </div>
+        <div id="player">
             <div id="logo"></div>
-            <div id="controls" class="player-hidden">
-                <img class="logo" src="style/img/player/main-logo.png" alt="Radio Logo">
-                <img class="pseudo-equalizer" src="style/img/player/pseudo-equalizer.png" alt="Equalizer">
-                <a href="javascript:void(0)" class="ctPlayer-btn-play">
-                    <div id="play-stop" class="played" onclick="togglePlayer()"></div>
-                    <span class="ctPlayer-btn-play-inner"></span>
-                </a>
-                <div id="volume-slider" class="ctPlayer-volume">
-                    <div class="ctPlayer-volume-slider" style="display: none;">
-                        <div class="ctPlayer-volume-slider-inner">
-                            <div class="ctPlayer-volume-slider-value">
-                                <a href="javascript:void(0)" class="ctPlayer-volume-slider-handler"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)" class="ctPlayer-btn-volume"></a>
-                </div>
-            </div>
-            <div id="lcd-screen" class="ctPlayer-display">
-                <span class="ctPlayer-display-text"></span>
-                <div class="container" style="visibility:hidden;">
-                    <div class="line" id="l1" >
-                        <div id="trackholder" class="line_text"></div>
-                        <script type="text/javascript" src="./status/get.js"></script>
-                        <div class="line_cover" style="visibility:hidden;"></div>
-                    </div>
-                </div>
-                </span>
+            <div id="lcd-screen"> 
             </div>
             <div id="-mini-flip-wrapper">
                 <a href="http://mostyska.net.ua/radio" target="_blank"><img id="flip-button" src="style/img/flip-button-sm-p.png" alt="Flip Button"></a>
             </div>
-            <div class="ctPlayer-bitrate">
-                <a href="javascript:void(0)" class="ctPlayer-btn-bitrate"></a>
-                <a href="javascript:void(0)" class="ctPlayer-btn-bitrate"></a>
-                <a href="javascript:void(0)" class="ctPlayer-btn-bitrate"></a>
-            </div>
-            <div class="ctPlayer-station" style="display:none;">
-                <a href="javascript:void(0)" class="ctPlayer-btn-station-prev" style="display: none;"></a>
-                <span id="sName" class="ctPlayer-station-title" style="visibility:hidden;"></span>
-                <a href="javascript:void(0)" class="ctPlayer-btn-station-next" style="display: none;"></a>
-            </div>
         </div>
-        
         <div id="alternative-player" class="player-visible">
             <img class="logo" src="style/img/player/main-logo.png" alt="Radio Logo">
             <img class="pseudo-equalizer" src="style/img/player/pseudo-equalizer.png" alt="Equalizer">
