@@ -28,6 +28,12 @@ header {
     background-color: transparent;
 }
 
+iframe 
+{ 
+    background-color: transparent; 
+    border: none; 
+} 
+
 #social-links {
     min-height: 64px;
     position: fixed;
@@ -73,6 +79,15 @@ header {
     color: white;
 }
 
+#player-changer {
+    background-color: transparent;
+    outline:none;
+    position:fixed;
+    right:5px;
+    top:5px;
+    z-index:50;
+}
+
 a.uppercase {
     text-transform: uppercase;
     text-decoration: none;
@@ -93,20 +108,24 @@ button {
 }
 
 .logo {
+    display:block;
     width: 150px;
     position: absolute;
-    transform: translate(-35px, -140px);
+    right:210px;
+    top:-150px;
 }
 
 .pseudo-equalizer {
+    display:block;
     width: 320px;
     height: 170px;
     position: absolute;
-    transform: translate(-119px, 10px);
+    right:120px;
+  /*  transform: translate(-110px, 10px);*/
 }
 
 #player {
-    display: block;
+    
     min-width: 320px;
     z-index: 10;
     position: fixed;
@@ -117,17 +136,22 @@ button {
 }
 
 #controls {
+    
     position: relative;
-    right: 10px;
 }
 
 #play-stop {
     width: 100px;
     height: 100px;
-    transform: translate(0px, 20px);
+    position:absolute;
+    bottom:-130px;
+    top:10px;
+    left:-10px;
+   /* transform: translate(-10px, 25px); */
     border: 10px solid transparent;
     border-radius: 75px;
     outline: none;
+    z-index:1000;
 }
 
 .stopped {
@@ -144,7 +168,10 @@ button {
     max-width: 340px;
     height: 5px;
     margin: 10px;
-    transform: translate(-110px, 90px);
+    position:absolute;
+    bottom:-140px;
+    left:-22px;
+  /*  transform: translate(-65px, 125px);*/
 }
 
 #bitrade-switcher {
@@ -176,14 +203,43 @@ button {
     color: #ffffff;
 }
 
+#alternative-player {
+   /*  display:none;*/
+    min-width: 320px;
+    z-index: 10;
+    position: fixed;
+    top: 39%;
+    bottom: 45%;
+    right: 50%;
+    left: 38.5%;
+}
+
+#alternative-controls {
+        position: absolute;
+        color:#ffffff;
+        bottom:-10px;
+        top:-40px;
+        right: 115px;
+    }
+.player-visible {
+       display:block;
+}
+
+.player-hidden {
+       display:none;
+}
+
 #lcd-screen {
     display: block;
-    transform: translate(-127px, 80px);
+    /* transform: translate(-127px, 125px); */
+    position:absolute;
+    top: 160px;
+    left:-126px;
     width: 310px;
     border: 10px solid #56698F;
     border-radius: 5px;
     background-color: #56698F;
-    height: 45px;
+    height: 55px;
     margin: 10px;
 }
 
@@ -210,11 +266,15 @@ footer {
 
 /* Styles for desktop BEGIN*/
 
-@media screen and (min-width: 850px) and (min-height: 600px) {
+@media screen and (min-width: 800px) and (min-height: 600px) {
     body {
-        background: url('../style/img/backgroung.jpg');
+        background: url('../style/img/background1.jpg');
+        background-size: cover;  
+        background-attachment: fixed;
+        background-position: center center;   
+        background-repeat: no-repeat;
     }
-    #player {
+    #player, #alternative-player {
         top: 35%;
         bottom: 45%;
         left: 47%;
@@ -283,6 +343,11 @@ footer {
         border: 10px solid #D8DCEE;
         border-radius: 10px;
     }
+
+    #program-description, #program-author, #program-title {
+        text-align:left;
+    }
+
     #fb-popup {
         top: 12%;
         right: 10px;
@@ -320,7 +385,17 @@ footer {
     }
 }
 
+#vk_comments,
+#vk_comments iframe {
+  width: 100% !important;
 
+}
+
+.fb-comments, 
+.fb-comments span, 
+.fb-comments iframe {
+    width: 100% !important;
+}
 /*END*/
 
 
@@ -330,25 +405,25 @@ footer {
   
 
     .logo {
-        position: absolute;
-        transform: translate(-180px, -55px);
+        position:absolute;
+        transform: translate(-340px, -55px);
     }
     .pseudo-equalizer {
         position: absolute;
-        transform: translate(-15px, -96px);
+        transform: translate(-170px, -96px);
         height: 200px;
     }
     div#play-stop {
         transform: translate(105px, -90px);
     }
     div#volume-slider {
-        transform: translate(-5px, -80px);
+        transform: translate(55px, 10px);
     }
     div#bitrate-switcher {
         transform: translate(100px, -90px);
     }
     div#lcd-screen {
-        transform: translate(-21px, -52px);
+        transform: translate(-16px, 0px);
         border-top-right-radius: 0;
         border-top-left-radius: 0;
     }
@@ -356,7 +431,7 @@ footer {
         display: block;
         height: 28px;
         width: 400px;
-        transform: translate(-140px, -55px);
+        transform: translate(-140px, 2px);
     }
     footer {
         display: none;
@@ -364,4 +439,4 @@ footer {
 }
 
 
-/* END*/
+/*END*/
