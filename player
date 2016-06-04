@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Most Live Radio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/reset.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/generic.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/status.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../favicon.ico" rel="shortcut icon" />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/swfobject.js"></script>
+	<script type="text/javascript" src="js/effects/scriptaculous.js?load=effects"></script>
+	<script type="text/javascript" src="js/jw/jwplayer.js"></script>
+	<script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>
+	<script type="text/javascript">
+ 		VK.init({apiId: 2840388, onlyWidgets: true});
+	</script>
+	<script language="javascript" type="text/javascript" src="https://eu.radioboss.fm:2199/system/streaminfo.js"></script>
+    <!--New plyer BEGIN-->
+    <link href="jplayer/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="jplayer/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="jplayer/dist/jplayer/jquery.jplayer.min.js"></script>
+    <script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+    var stream = {
+        title: "MostLIVE",
+        mp3: "http:\/\/eu.radioboss.fm:8036\/stream"
+    },
+    ready = false;
+
+    $("#jquery_jplayer_1").jPlayer({
+        ready: function (event) {
+            ready = true;
+            $(this).jPlayer("setMedia", stream);
+        },
+        pause: function() {
+            $(this).jPlayer("clearMedia");
+        },
+        error: function(event) {
+            if(ready && event.jPlayer.error.type === $.jPlayer.error.URL_NOT_SET) {
+                // Setup the media stream again and play it.
+                $(this).jPlayer("setMedia", stream).jPlayer("play");
+            }
+        },
+        swfPath: "../dist/jplayer",
+        supplied: "mp3",
+        preload: "none",
+        wmode: "window",
+        useStateClassSkin: true,
+        autoBlur: false,
+        keyEnabled: true
+    });
+
+
+    $("#jplayer_inspector").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
+});
+//]]>
+</script>
+    <!--END-->
+    <!-- Native styles BEGIN-->
+    <link rel="stylesheet" type="text/css" href="style/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono|Anonymous+Pro|Inconsolata&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style/animate.css">
+    <link rel="stylesheet" type="text/css" href="style/slider.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <!-- END -->
+</head>
+
+<body>
+    <!-- START Facebook social plugin - - - - - - - - - - - - - - - -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/uk_UA/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- END Facebook social plugin - - - - - - - - - - - - - - - - - - -->
+    <header>
+        <div id="social-links">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/MostLive" target="_blank"><img class="social-button hover" src="style/img/social-buttons/facebook-button.png" alt="Facebook"></a>
+                </li>
+                <li>
+                    <a href="https://vk.com/radio.most.live" target="_blank"><img class="social-button hover" src="style/img/social-buttons/vk-button.png" alt="VK"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/most_live_radio" target="_blank"><img class="social-button hover" src="style/img/social-buttons/twitter-button.png" alt="Twitter"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/most.live.radio" target="_blank"><img class="social-button hover" src="style/img/social-buttons/instagram-button.png" alt="Instagram"></a>
+                </li>
+            </ul>
+        </div>
+        <div id="language-bar">
+            <ul>
+                <li><a class="langlink" href="#">ua</a></li>
+                <li><a class="langlink" href="#">pl</a></li>
+                <li><a class="langlink" href="#">eng</a></li>
+                <li><a class="langlink" href="#">ru</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div id="left-popup" class="popup-hidden">
+            <h3 class="popup-title">В ефірі зараз:</h3>
+            <h2 id="program-title">Program title</h2>
+            <h4 id="program-author">Program author</h4>
+            <p id="program-description">Information about the program which running on air now</p>
+        </div>
+        <div id="fb-popup" class="popup-hidden">
+            <!-- Facebook block -->
+            <iframe src="facebook-comments-plugin.html" width="100%" height="100%" align="center">
+                    Error! Bad browser!
+             </iframe>
+        </div>
+        <div id="vk-popup" class="popup-hidden">
+            <iframe src="vk-comments-plugin.html" width="100%" height="100%" align="center">
+                    Error! Bad browser!
+             </iframe>
+        </div>
+        <div>
+        </div>
+        
+        <div id="player">
+            <div id="logo"></div>
+            <div id="lcd-screen"> 
+            </div>
+            <div id="-mini-flip-wrapper">
+                <a href="http://mostyska.net.ua/radio" target="_blank"><img id="flip-button" src="style/img/flip-button-sm-p.png" alt="Flip Button"></a>
+            </div>
+        </div>
+        <div id="alternative-player" class="player-visible">
+            <img class="logo" src="style/img/player/main-logo.png" alt="Radio Logo">
+            <img class="pseudo-equalizer" src="style/img/player/pseudo-equalizer.png" alt="Equalizer">
+            <div id= "alternative-controls">
+            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+                    <div class="jp-type-single">
+                        <div class="jp-gui jp-interface">
+                            <div class="jp-controls">
+                                <button class="jp-play" role="button" tabindex="0">play</button>
+                                <button class="jp-stop" role="button" tabindex="0">stop</button>
+                            </div>
+                            <div class="jp-volume-controls">
+                                <div class="jp-volume-bar">
+                                    <div class="jp-volume-bar-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jp-no-solution">
+                            <span>Update Required</span>
+                            To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="flip-block">
+            <ul>
+                <li><img class="flip-button" src="style/img/on-air-button-head.png" alt="on air now"></li>
+                <li>
+                    <a href="#" onclick="togglePopUpLeft()"><img class="flip-button flip-button-main hover" src="style/img/on-air-info-button.png" alt="on air button"></a>
+                </li>
+            </ul>
+        </div>
+        <div id="chats-block">
+            <ul>
+                <li><img class="chat-button chat-button-head" src="style/img/chat-button-head.png" alt="Chats"></li>
+                <li>
+                    <ul id="chat-social-btn-block">
+                        <li>
+                            <a href="#" onclick="togglePopUpVk()"><img class="chat-button chat-button-main hover" src="style/img/chat-button-vk.png" alt="VK chat"></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="togglePopUpFb()"><img class="chat-button chat-button-main hover" src="style/img/chat-button-facebook.png" alt="Facebook chat"></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <a href="https://github.com/yurazinko/most-life-radio">©</a> 2016 Most Live Radio
+    </footer>
+
+	<script type="text/javascript">
+	VK.Widgets.Comments("vk_comments", {limit: 10, width: "100%", attach: "*"});
+	</script>
+<!-- Native scripts BEGIN -->
+<script type="text/javascript" src="script/wow-min.js "></script>
+<script>
+new WOW().init();
+</script>
+<script type="text/javascript" src="script/main.js"></script>
+<!--END-->
+
+</body>
+
+</html>
