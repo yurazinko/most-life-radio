@@ -111,7 +111,7 @@ button {
     display:block;
     width: 150px;
     position: absolute;
-    right:210px;
+    right:215px;
     top:-150px;
 }
 
@@ -219,7 +219,7 @@ button {
         color:#ffffff;
         bottom:-10px;
         top:-40px;
-        right: 115px;
+        right: 120px;
     }
 .player-visible {
        display:block;
