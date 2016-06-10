@@ -156,8 +156,8 @@ $(document).ready(function(){
                             </div>
                         </div>
                         <div class="jp-no-solution">
-                            <span>Update Required</span>
-                            To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                            <span>Потрібно оновити браузер або Flash Player</span>
+                            Для того, щоб увімкнути відтворення вам потрібно оновити браузер до останньої версії або оновити<a href="http://get.adobe.com/flashplayer/" target="_blank">Flash Player</a>.
                         </div>
                     </div>
                 </div>
