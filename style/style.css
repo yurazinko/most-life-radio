@@ -264,6 +264,12 @@ footer {
     display: none;
 }
 
+#program-img {
+    margin: auto 0;
+    position: relative;
+    width: 95%;
+}
+
 /* Styles for desktop BEGIN*/
 
 @media screen and (min-width: 800px) and (min-height: 600px) {
