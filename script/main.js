@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
         case '6,10':
         case '6,11':
         case '6,12':
-            loadDoc('../programs/test.txt');
+            loadDoc('programs/test.txt');
             break;
 		default: 
 			currentProgTitle.innerHTML = 'Non-stop music';		        
