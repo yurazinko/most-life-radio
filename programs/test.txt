@@ -1,5 +1,4 @@
-<h3>Теорія Успіху</h3>
-<h4>Павло Тарчанин</h4>
-<p>Що таке успіх? Як його досягнути? Та як це зробили інші? Історії відомих людей, великих брендів, цікаві інтерв'ю з успішними людьми та тими, хто свій шлях тільки шукає. 
-Слухайте нас щовівторка та щочетверга о 16:00</p>
-<img id="program-img" src="programs/img/theory-of-succes.jpg" alt="Theory of succes">
+<h3>Non Stop Music</h3>
+<h4></h4>
+<p></p>
+<img id="program-img" src="programs/img/music-for-the-masses.jpg" alt="Non stop music">
