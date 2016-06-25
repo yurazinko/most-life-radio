@@ -77,28 +77,6 @@ function togglePopUpVk() {
     }
 }
 
-/*
-document.addEventListener('DOMContentLoaded', function() {
-    var regularPlayer = document.getElementById('controls');
-    var altPlayer = document.getElementById('alternative-player');
-    var switcher = document.getElementById('player-changer');
-    switcher.onclick = function() {
-        if (regularPlayer.className == 'player-visible') {
-            regularPlayer.classList.remove('player-visible');
-            regularPlayer.classList.add('player-hidden');
-            altPlayer.classList.remove('player-hidden');
-            altPlayer.classList.add('player-visible');
-        } else if (regularPlayer.className == 'player-hidden') {
-           regularPlayer.classList.remove('player-hidden');
-           regularPlayer.classList.add('player-visible');
-           altPlayer.classList.remove('player-visible');
-           altPlayer.classList.add('player-hidden');
-        }
-    }
-
-});
-
-*/
 
 /*On-air description switcher*/
 document.addEventListener('DOMContentLoaded', function() {
@@ -110,8 +88,18 @@ document.addEventListener('DOMContentLoaded', function() {
     console.info('Current day and hour is: ' + specificTime);
     console.info('Current minute is: ' + minute);
     var currentProgTitle = document.getElementById('program-title');
-    var currentProgAuthor = document.getElementById('program-author');
-    var currentProgDesc = document.getElementById('program-description');
+
+    function loadDoc(source) {
+        var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                currentProgTitle.innerHTML = xhttp.responseText;
+            }
+        };
+        xhttp.open('POST', source, true);
+        //xhttp.setRequestHeader('Content-type', 'text/html');
+        xhttp.send();
+    }
 
     switch (specificTime) {
         case '1,12':
@@ -119,37 +107,28 @@ document.addEventListener('DOMContentLoaded', function() {
         case '3,12':
         case '3,13':
             currentProgTitle.innerHTML = 'Музичний Мармеляд';
-            currentProgAuthor.innerHTML = 'Стефцьо і Ромцьо';
-            currentProgDesc.innerHTML = 'Цікаві музичні історії, огляд шоу-бізу та інтерв\'ю з відомими виконавцями міста та району. Все це у розважальній програмі Стефця і Ромця "Музичний мармеляд". Кожного понеділка та середи о 12:30.';
             break;
         case '5,17':
 	        currentProgTitle.innerHTML = 'Вільна Кава';
-	        currentProgAuthor.innerHTML = 'Наталя';
 	        break;
-	    case '1,18':
+	    case '1,17':
 		    currentProgTitle.innerHTML = 'Мостиські Набутки';
-		    currentProgAuthor.innerHTML = 'Олег Макар';
-		    currentProgDesc.innerHTML = 'Про актуальне, резонансне, невідоме та цікаве в житті нашого міста, влади, мешканців, громадських ініціатив і всіх добрих людиск. Щопонеділка о 18:00 з Олегом Макаром';
 		    break;
 		case '2,16':
 			currentProgTitle.innerHTML = 'Теорія Успіху';
-			currentProgAuthor.innerHTML = 'Павло Тарчанин';
-			currentProgDesc.innerHTML = 'Що таке успіх? Як його досягнути? Та як це зробили інші? Історії відомих людей, великих брендів, цікаві інтерв\'ю з успішними людьми та тими, хто свій шлях тільки шукає. Про це та багато іншого говоримо у програмі "Теорія успіху". Слухайте нас на Most Live Radio щовівторка та щочетверга о 16:00.';
 			break;
 		case '2,18':
 			currentProgTitle.innerHTML = 'Маленькі Люди';
-			currentProgramAuthor.innerHTML = 'Уляна Кубара';
-			currentProgDesc.innerHTML = 'Усім тим, хто має вдома непосидька або просто цікавиться вихованням дітей. Навіть якщо у Вас ще не має дітей, не забувайте - Ви чиясь дитина :)';
 			break;
 		case '3,17':
 			currentProgTitle.innerHTML = 'Катрусин Кінозал';
-			currentProgramAuthor.innerHTML = 'Катя Гнатовська';
-			currentProgDesc.innerHTML = 'Для усіх кіноманів пропонуємо огляд відомих фільмів. Слухайте нас кожної середи та неділі о 17:00.';
 			break;
+        case '6,10':
+        case '6,11':
+        case '6,12':
+            loadDoc('../programs/test.txt');
+            break;
 		default: 
-			currentProgTitle.innerHTML = 'Non-stop music';
-			currentProgAuthor.innerHTML = '';
-			currentProgDesc.innerHTML = '';		        
+			currentProgTitle.innerHTML = 'Non-stop music';		        
     }
-
 })

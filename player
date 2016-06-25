@@ -111,9 +111,7 @@ $(document).ready(function(){
     <main>
         <div id="left-popup" class="popup-hidden">
             <h3 class="popup-title">В ефірі зараз:</h3>
-            <h2 id="program-title">Program title</h2>
-            <h4 id="program-author">Program author</h4>
-            <p id="program-description">Information about the program which running on air now</p>
+            <div id="program-title"></div>
         </div>
         <div id="fb-popup" class="popup-hidden">
             <!-- Facebook block -->
