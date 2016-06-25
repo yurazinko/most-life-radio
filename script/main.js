@@ -102,33 +102,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     switch (specificTime) {
+        // Music marmalade
         case '1,12':
         case '1,13':
         case '3,12':
         case '3,13':
-            currentProgTitle.innerHTML = 'Музичний Мармеляд';
+             loadDoc('programs/marmelyad.txt');
             break;
-        case '5,17':
-	        currentProgTitle.innerHTML = 'Вільна Кава';
-	        break;
+        // Makar's fucking bored shit   
 	    case '1,17':
 		    currentProgTitle.innerHTML = 'Мостиські Набутки';
 		    break;
+        // Theory of succes    
 		case '2,16':
+        case '4,16':
 			currentProgTitle.innerHTML = 'Теорія Успіху';
 			break;
+        // Little humans    
 		case '2,18':
 			currentProgTitle.innerHTML = 'Маленькі Люди';
 			break;
+        // Katya's movies    
 		case '3,17':
 			currentProgTitle.innerHTML = 'Катрусин Кінозал';
 			break;
-        case '6,10':
-        case '6,11':
-        case '6,12':
-            loadDoc('programs/test.txt');
-            break;
 		default: 
-			currentProgTitle.innerHTML = 'Non-stop music';		        
+			loadDoc('programs/test.txt');		        
     }
 })
