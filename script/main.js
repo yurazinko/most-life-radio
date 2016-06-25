@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentProgTitle.innerHTML = xhttp.responseText;
             }
         };
-        xhttp.open('GET', source, true);
+        xhttp.open('POST', source, true);
         //xhttp.setRequestHeader('Content-type', 'text/html');
         xhttp.send();
     }
