@@ -107,25 +107,36 @@ document.addEventListener('DOMContentLoaded', function() {
         case '1,13':
         case '3,12':
         case '3,13':
-             loadDoc('programs/marmelyad.txt');
+            loadDoc('programs/marmelyad.txt');
             break;
         // Makar's fucking bored shit   
 	    case '1,17':
-		    currentProgTitle.innerHTML = 'Мостиські Набутки';
+		    loadDoc('programs/makar.txt');
 		    break;
         // Theory of succes    
 		case '2,16':
         case '4,16':
-			currentProgTitle.innerHTML = 'Теорія Успіху';
+			loadDoc('programs/theory-of-succes.txt');
 			break;
         // Little humans    
 		case '2,18':
-			currentProgTitle.innerHTML = 'Маленькі Люди';
+			loadDoc('programs/kubara.txt');
 			break;
         // Katya's movies    
-		case '3,17':
-			currentProgTitle.innerHTML = 'Катрусин Кінозал';
+		case '0,17':
+        case '3,17':
+			loadDoc('programs/kinozal.txt');
 			break;
+        // Liasotochylka
+        case '6,14':
+            loadDoc('programs/liasitochylka.txt');
+            break;
+        // Music from listeners    
+        case '6,17':
+        case '6,18':
+        case '6,19':
+            loadDoc('programs/music-listeners.txt');
+            break;
 		default: 
 			loadDoc('programs/test.txt');		        
     }
