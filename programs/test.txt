@@ -1,4 +1,4 @@
 <h3>Non Stop Music</h3>
 <h4></h4>
-<p></p>
+<p>Музика від хороших виконавців, яку ми ретельно відібрали та поділили на ранковий, обідній та вечірній плейлисти. Вмикайтесь та слухайте!</p>
 <img id="program-img" src="programs/img/music-for-the-masses.jpg" alt="Non stop music">
