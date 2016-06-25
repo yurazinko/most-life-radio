@@ -28,6 +28,11 @@ header {
     background-color: transparent;
 }
 
+h1, h2, h3 {
+    margin-top: 5px;
+    margin-bottom: 5px; 
+}
+
 iframe 
 { 
     background-color: transparent; 
