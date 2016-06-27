@@ -142,6 +142,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			loadDoc('programs/test.txt');		        
     }
 
-    }, 30000)
+    }, 3000)
     
 })
