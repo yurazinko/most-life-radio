@@ -100,8 +100,9 @@ document.addEventListener('DOMContentLoaded', function() {
         //xhttp.setRequestHeader('Content-type', 'text/html');
         xhttp.send();
     }
+    setInterval(function(){
 
-    switch (specificTime) {
+    	switch (specificTime) {
         // Music marmalade
         case '1,12':
         case '1,13':
@@ -140,4 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		default: 
 			loadDoc('programs/test.txt');		        
     }
+
+    }, 30000)
+    
 })
