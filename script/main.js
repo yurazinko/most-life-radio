@@ -142,6 +142,28 @@ document.addEventListener('DOMContentLoaded', function() {
 			loadDoc('programs/test.txt');		        
     }
 
-    }, 3000)
+    }, 3000);
     
+})
+
+$(function(){
+    var background = $('body');
+    var imagesList = [];
+    var i = 0;
+
+    imagesList[0] = 'url(style/slideshow/1.jpg)';
+    imagesList[1] = 'url(style/slideshow/2.jpg)';
+    imagesList[2] = 'url(style/slideshow/3.jpg)';
+    imagesList[3] = 'url(style/slideshow/4.jpg)';
+
+    function changeImages() {
+        alert('working!');
+        i++;
+        background.css({'background-image':imagesList[i]})
+        if (i == imagesList.length) {
+            i = 0;
+        }
+    }
+
+    setInterval(changeImages(), 2000);
 })
