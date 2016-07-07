@@ -157,7 +157,7 @@ $(function(){
     imagesList[3] = 'url(style/slideshow/4.jpg)';
 
     function changeImages() {
-            console.log('www');
+            console.log('working');
             background.css('background-image', imagesList[i]);
             i++;
             if (i == imagesList.length) {
@@ -165,5 +165,5 @@ $(function(){
             }
     }
 
-    setInterval(changeImages(), 5000);
+    setInterval(changeImages, 5000);
 })
