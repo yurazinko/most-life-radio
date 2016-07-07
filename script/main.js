@@ -157,13 +157,13 @@ $(function(){
     imagesList[3] = 'url(style/slideshow/4.jpg)';
 
     function changeImages() {
-        alert('working!');
-        i++;
-        background.css({'background-image':imagesList[i]})
-        if (i == imagesList.length) {
-            i = 0;
-        }
+            console.log('www');
+            background.css('background-image', imagesList[i]);
+            i++;
+            if (i == imagesList.length) {
+                i = 0;
+            }
     }
 
-    setInterval(changeImages(), 2000);
+    setInterval(changeImages(), 5000);
 })
