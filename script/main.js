@@ -165,5 +165,5 @@ $(function(){
             }
     }
 
-    setInterval(changeImages, 5000);
+    setInterval(changeImages, 30000);
 })
